@@ -3,12 +3,11 @@
 """
 AI-AttentionSettlement — zero-API demo.
 
-One command, stdlib only, < 10 s. Shows the three live mechanisms:
+One command, stdlib only, < 10 s. Shows viewkit live:
 
-  1. view search   — 207K-char real-world config corpus distilled to a one-line view
-  2. view gather   — aggregation questions get ALL instances, never top-k
-  3. deterministic settlement — count/sum/lookup answered by code with evidence,
-                                refusal instead of substitution when absent
+  1. view search   — 200K-char real-world config corpus distilled to a one-line view
+  2. view lookup / gather / absence — minimal window, full-set view, empty view + refusal
+  3. claim index   — every README number, where it lives
 
 No API key, no model download, no third-party dependency.
 """
@@ -19,10 +18,8 @@ import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "viewkit"))
-sys.path.insert(0, os.path.join(ROOT, "aggsettle"))
 
 from viewkit import build_view, est_tokens          # noqa: E402
-import aggsettle                                     # noqa: E402
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -60,7 +57,7 @@ def needle_corpus():
     """Deterministic synthetic corpus: 20 archive facts scattered in filler.
 
     License-safe replacement for the experiment corpora (which are built from
-    arXiv paper text via scripts/build_corpus*.py — fetch instructions in docs).
+    arXiv paper text — provenance in corpus/DATA_SOURCES.md).
     """
     random.seed(20261024)
     values = {  # a few values reused from the recorded experiments for flavor
@@ -96,7 +93,7 @@ def needle_corpus():
 
 # ---------------------------------------------------------------- 2. lookup/gather
 def step2_views(text):
-    h("STEP 2  view lookup & gather — two view types, not one trimmed size")
+    h("STEP 2  view lookup / gather / absence — three view shapes")
 
     t0 = time.time()
     r = build_view(text, "What is the entry count reported for archive NX-7001?",
@@ -113,37 +110,17 @@ def step2_views(text):
     print(f"  the ENTIRE aggregation set fits inside a ~2K-char view —")
     print(f"  this is what lets enumeration happen at all (models: 0-1 of 7)")
 
-
-# ---------------------------------------------------------------- 3. aggsettle
-def step3_settle(text):
-    h("STEP 3  deterministic settlement — aggregation never enters the model")
-    facts = aggsettle.extract_facts(text)
-    print(f"extracted facts: {len(facts)}  (entity, value) triples\n")
-
-    qs = [
-        "What is the entry count reported for archive NX-7001?",
-        "How many archives hold more than 7000 entries?",
-        "What is the total of all entry counts?",
-        "What is the entry count reported for archive NX-9901?",  # does not exist
-    ]
-    for q in qs:
-        r = aggsettle.answer_checked(q, facts)
-        tag = "REFUSED" if r.get("refused") else "answered"
-        print(f"Q: {q}")
-        print(f"   -> {r['answer']}   [{r['kind']} / {tag}]  "
-              f"evidence rows: {len(r.get('evidence') or [])}")
-        ev = r.get("evidence") or []
-        if ev and len(ev) <= 8:
-            for e in ev:
-                print(f"      {e}")
-        elif ev:
-            print(f"      {ev[0]}  ... ({len(ev)} rows total)")
-        print()
+    r = build_view(text, "What is the entry count reported for archive NX-9901?",
+                   mode="lookup")
+    print(f"\n[absence] Q: entry count of archive NX-9901 (does not exist)?")
+    print(f"  view = {r.get('chars', 0)} chars, not_found={r.get('not_found')}")
+    print(f"  note: {r.get('note','')}")
+    print(f"  -> empty view handed to the upper layer to REFUSE — never a substituted value")
 
 
-# ---------------------------------------------------------------- 4. index
-def step4_index():
-    h("STEP 4  claim index — every README number, where it lives")
+# ---------------------------------------------------------------- 3. index
+def step3_index():
+    h("STEP 3  claim index — every README number, where it lives")
     rows = [
         ("20/20 single-fact @ 514K chars, two models", "docs/report (recorded)"),
         ("aggregation 0-1 of 7 per battery (two models)", "docs/report (recorded)"),
@@ -151,10 +128,10 @@ def step4_index():
          "docs/report (recorded)"),
         ("minimal sufficient view = the ~105-char evidence line, 10/10",
          "docs/report (recorded)"),
-        ("207K-char corpus -> one-line view", "STEP 1 above (live)"),
+        ("200K-char corpus -> one-line view", "STEP 1 above (live)"),
         ("gather view holds the whole aggregation set", "STEP 2 above (live)"),
-        ("deterministic settlement: count/sum/lookup + refusal",
-         "STEP 3 above (live)"),
+        ("non-existent entity -> empty view + refusal, no substitution",
+         "STEP 2 above (live)"),
         ("1.43M-token corpus -> view in 1.1 s, 12/12", "docs/report (recorded)"),
     ]
     for claim, where in rows:
@@ -168,8 +145,7 @@ def main():
     step1_k8s()
     text = needle_corpus()
     step2_views(text)
-    step3_settle(text)
-    step4_index()
+    step3_index()
     print(f"\ntotal wall time: {time.time() - t0:.2f}s")
 
 

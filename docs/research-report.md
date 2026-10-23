@@ -3,7 +3,7 @@
 > AI-AttentionSettlement · 零预算前期研究 · 2026-09 ～ 2026-10
 > 状态：实验电池已结项；下钻回路与 loop 电池未建（见《系统设计》§8 预注册）
 
-**Abstract (EN).** Across 128K–514K-char corpora and four API models, we measure that long-context failure is a **task-type cliff**, not a length cliff: single-fact retrieval stays at 100% while aggregation collapses to ≈0%, replicated across models and robust to full needle-position shuffling. The failure mechanism is **nearest-read-value substitution** — the model emits one already-read value instead of enumerating (content-driven, 89% same-type, disappears when the attractor sentence is deleted). The response that works is not a smarter model but a **settlement layer**: a ~105-char minimal sufficient view makes single-fact 10/10; gathering all instances into a 1.2K-char view lets enumeration happen; deterministic code finishes count/sum. All findings are pre-registered, paired-tested (McNemar), and two early length claims were retracted in writing when the data overturned them.
+**Abstract (EN).** Across 128K–514K-char corpora and four API models, we measure that long-context failure is a **task-type cliff**, not a length cliff: single-fact retrieval stays at 100% while aggregation collapses to ≈0%, replicated across models and robust to full needle-position shuffling. The failure mechanism is **nearest-read-value substitution** — the model emits one already-read value instead of enumerating (content-driven, 89% same-type, disappears when the attractor sentence is deleted). The response that works is not a smarter model but a **settlement layer**: a ~105-char minimal sufficient view makes single-fact 10/10; gathering all instances into a 1.2K-char view lets enumeration happen. All findings are pre-registered, paired-tested (McNemar), and two early length claims were retracted in writing when the data overturned them.
 
 ---
 
@@ -80,7 +80,7 @@ glm-4.5-air 在缺席档固定输出 `9267`。三步判别：
 | ⑦ 原文直答 40% → ⑤ 原地高亮 80% | +40pp | **0.031** | 标注增益可确证 |
 | ⑤ 高亮 80% → ⑧′ oracle 2K 视图 100% | +20pp | 0.25 | 换场增量未确证 |
 
-**视图修的是枚举，不是算术。** 2×2 实验（同五值，只改几何与送检文本）：散点×全档 1/5 → 聚簇×全档 2/5 → 聚簇×3.1K 视图 3/5——五项全进了加法，错在一位算术。聚合的残局交给确定性结算器（aggsettle），见《系统设计》§2。
+**视图修的是枚举，不是算术。** 2×2 实验（同五值，只改几何与送检文本）：散点×全档 1/5 → 聚簇×全档 2/5 → 聚簇×3.1K 视图 3/5——五项全进了加法，错在一位算术。模型能否在这份全量视图上自己完成聚合，是登记在册、尚未跑的判定实验。
 
 **单位规则**（实测反直觉处）：
 

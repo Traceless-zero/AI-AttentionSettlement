@@ -3,7 +3,7 @@
 > 设计口径 · 2026-10-24 ｜ 前身：《大模型窗口内动态注意力机制构想》v3.3（2026-10-19 定稿）
 > 本文件是 v3.3 的公开压缩版 + 2026-10 对话期新增理论；实验读数见《研究报告》。
 
-**Abstract (EN).** An external, training-free settlement layer over the context window: per query, spans are scored and a compact **view** is materialized and re-prefilled; the original stays as a lossless, pointer-addressable **sediment layer**; formalizable tasks are settled by code. Positioning (verified against 2024–2026 literature): per-query selection and materialized views are a crowded space; the vacant intersection is **pointers + lossless sediment + drill-down re-read** — "everyone changes what the model reads this turn; nobody guarantees it can go back and re-read when the choice was wrong."
+**Abstract (EN).** An external, training-free settlement layer over the context window: per query, spans are scored and a compact **view** is materialized and re-prefilled; the original stays as a lossless, pointer-addressable **sediment layer**. Positioning (verified against 2024–2026 literature): per-query selection and materialized views are a crowded space; the vacant intersection is **pointers + lossless sediment + drill-down re-read** — "everyone changes what the model reads this turn; nobody guarantees it can go back and re-read when the choice was wrong."
 
 ---
 
@@ -24,7 +24,7 @@
 |---|---|---|
 | **判断层** | 读什么、何时结算、何时回读 | 应该进模型，且正在进（agent 训练把"分片读、记笔记、回头重读"焊进轨迹；Know-When-to-Stop / SEAL / retrieval-heads 线是前哨） |
 | **执行层** | 驻留 KV、re-prefill、换场 | 永远在服务栈——模型无法对自己 re-prefill，这是编排动作 |
-| **保证层** | 无损沉积、指针账本、审计回放、形式化旁路 | 永远在模型外——**"无损可回溯"是运行时的承诺，不是权重能给出的能力**；训练得再好的模型只能"表现可靠"，不能"承诺不出错" |
+| **保证层** | 无损沉积、指针账本、审计回放 | 永远在模型外——**"无损可回溯"是运行时的承诺，不是权重能给出的能力**；训练得再好的模型只能"表现可靠"，不能"承诺不出错" |
 
 类比：虚拟内存没有做进 CPU 核，它是 MMU + 页表 + 磁盘的横向分层。**本设计是 OS 层，不是更大的 CPU。** 外部实现的双重意义：外部先做出证据和语义，平台再吸收（RAG→长上下文、压缩→context editing、缓存→prompt caching 的历史路径）；且治理/审计/跨厂商中立这个位置，物理上只存在于模型之外。
 
@@ -34,11 +34,9 @@
 Q（最新用户输入）
  ├─ 0. 预算内 no-op        语料 < 舒适预算（200K token）→ 整份透传；
  │                          续说类（"继续"）→ 目标本在尾部高注意力区，跳过
- ├─ 1. 可形式化？          lookup / count / range / sum / max / min
- │                          → aggsettle 确定性结算（证据行 + 拒答，绝不替换）
- ├─ 2. 集中式选择           实体问句 → lookup 视图；语义问句 → search 视图
+ ├─ 1. 集中式选择           实体问句 → lookup 视图；语义问句 → search 视图
  │                          （BM25 粗筛 → CE 精排 → span/回合级视图 + 坐标指针）
- └─ 3. 弥散式扫掠（未建）   gather 全量视图 / 分片 loop（见 §5.3，预注册未实施）
+ └─ 2. 弥散式扫掠（未建）   gather 全量视图 / 分片 loop（见 §5.3，预注册未实施）
 ```
 
 no-op 的定性：这是**注意力管理工程，不是检索**——目标已在天然高注意力区时，造视图是多此一举；预算内整份透传是正确行为而非失职。
@@ -70,7 +68,7 @@ no-op 的定性：这是**注意力管理工程，不是检索**——目标已�
 | regime | 相关性形态 | 正确响应 | 证据 |
 |---|---|---|---|
 | 集中（针式） | 答案落在少数几句 | **选择** | 单事实 20/20；105 字符最小充分视图 |
-| 弥散·可形式化 | 所有实例相关、可提值 | **gather 全量 + 确定性结算** | 1.2K 视图装下 20 事实；aggsettle 全对 |
+| 弥散·可形式化 | 所有实例相关、可提值 | **gather 全量视图**（枚举材料备齐；模型能否自行完成聚合 = §8 判定实验） | 1.2K 视图装下 20 事实 |
 | 弥散·不可形式化 | 每段都弱相关（综合/主题） | **迭代（loop）**，见 5.3 | 聚簇×视图 1/5→3/5（视图修枚举不修算术） |
 
 ### 5.2 理论主张：压缩降级为派生缓存

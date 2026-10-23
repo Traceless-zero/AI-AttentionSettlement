@@ -3,9 +3,9 @@
 > **模型不是"读不懂"，是"没读到"。**
 > **Models don't fail to understand — they fail to read.**
 
-一个外置的、零训练的**上下文结算层**：每次提问时，以该提问为锚点对上下文做 span 级相关性打分，物化出一份紧凑的**二级视图**（re-prefill，携带坐标指针）供模型阅读；原文完整保留为可寻址的**沉积层**；可形式化的任务（计数 / 求和 / 极值 / 查值）由确定性代码结算，根本不进模型。零训练、不动模型内部、适配任意 API 模型。
+一个外置的、零训练的**上下文结算层**：每次提问时，以该提问为锚点对上下文做 span 级相关性打分，物化出一份紧凑的**二级视图**（re-prefill，携带坐标指针）供模型阅读；原文完整保留为可寻址的**沉积层**。零训练、不动模型内部、适配任意 API 模型。
 
-An external, training-free **context-settlement layer** for LLMs. On every query, spans of the context are relevance-scored against the question; a compact **working view** is materialized and re-prefilled; the original text stays intact as an addressable **sediment layer**; formalizable tasks (count / sum / min / max / lookup) are settled by deterministic code instead of the model. Zero training, no model internals, works with any API model.
+An external, training-free **context-settlement layer** for LLMs. On every query, spans of the context are relevance-scored against the question; a compact **working view** is materialized and re-prefilled; the original text stays intact as an addressable **sediment layer**. Zero training, no model internals, works with any API model.
 
 > **个人零预算研究项目**：全部实验用免费 API 额度完成（约百发/天量级），无任何算力采买；本仓库为前期研究与设计的存档，代码非生产级。
 > **A personal, zero-budget research project**: all experiments ran on free API quotas (~a hundred calls/day); this repo archives a preliminary study and design, and is not production software.
@@ -16,9 +16,9 @@ An external, training-free **context-settlement layer** for LLMs. On every query
 python demo/run.py
 ```
 
-零 API key、零第三方依赖、约 0.1 秒。现场演示：20 万字符语料蒸馏成 32 字符视图；整个聚合集合装进 1.2K 字符视图；计数 / 求和 / 查值由代码带证据行给出；不存在的实体干净拒答（`NOT_FOUND`，绝不替换成别的值）。
+零 API key、零第三方依赖、约 0.1 秒。现场演示：20 万字符语料蒸馏成 32 字符视图；整个聚合集合装进 1.2K 字符视图；问不存在的实体返回空视图、交由上层拒答，绝不替换成别的值。
 
-Zero API keys, zero dependencies, ~0.1 s: a 200K-char corpus distilled to a 32-char view; the entire aggregation set inside a 1.2K-char view; count / sum / lookup settled by code with evidence rows; a clean `NOT_FOUND` refusal for a non-existent entity.
+Zero API keys, zero dependencies, ~0.1 s: a 200K-char corpus distilled to a 32-char view; the entire aggregation set inside a 1.2K-char view; a non-existent entity returns an empty view for the upper layer to refuse — no value substitution.
 
 ---
 
@@ -42,8 +42,8 @@ Failure forensics: aggregation fails because **enumeration never happens** — t
 
 1. **最小充分视图 = 证据行本身。** 约 105 字符的一行，10/10 答对；标准 2K token 视图比所需大近 20 倍。在场即充分——顺序、位置、精排全部不影响（各排布臂全部 15/15）。
    **Minimal sufficient view = the evidence line itself.** A ~105-char line answers 10/10; a 2K-token view is ~20× larger than needed. Presence suffices — order, position and ranking do not matter (15/15 in all arrangement arms).
-2. **视图修枚举，代码修算术。** 把全部 5 个值放进 3.1K 字符视图，聚合从 1/5 → 3/5（五项全进了加法，残余错误只是一位算术）。确定性结算器收尾。
-   **Views fix enumeration; code fixes arithmetic.** All 5 values in a 3.1K-char view moved aggregation 1/5 → 3/5 (all five entered the addition; the residual error was one digit). A deterministic settler finishes the job.
+2. **视图修的是枚举，不是算术。** 把全部 5 个值放进 3.1K 字符视图，聚合从 1/5 → 3/5——五项全进了加法，残余错误只是一位算术。模型能否在这份全量视图上自己完成聚合，是待跑的判定实验。
+   **Views fix enumeration, not arithmetic.** All 5 values in a 3.1K-char view moved aggregation 1/5 → 3/5 — all five entered the addition; the residual error was one digit. Whether the model can finish aggregation on its own over such a full-set view is the pending adjudication experiment.
 3. **规模不是瓶颈。** 1.43M token / 5,000 回合语料上，1/8 预算视图 **1.1 秒**组装完成（BM25、零依赖），12/12 命中；20 万字符真实配置语料检索蒸馏出 **32 字符视图**。
    **Scale is not the bottleneck.** On a 1.43M-token / 5,000-turn corpus, a 1/8-budget view assembles in **1.1 s** (BM25, zero dependencies), 12/12 QA hit; a 200K-char real-world config corpus distills to a **32-char view**.
 
@@ -56,7 +56,6 @@ One honest correction we keep visible: an early "aggregation ≈ 0%" reading was
 ```
 viewkit/     视图构建器 view builder — turns / lookup / gather / search 四模式，
              BM25 内核（仅标准库），可选 CE 精排（BGE-reranker-v2-m3）
-aggsettle/   确定性结算器 deterministic settler — 可形式化任务不进模型；UNROUTED 兜底拒答不猜
 demo/        一条命令 one command、零 API、<10 秒（python demo/run.py）
 docs/        研究报告 + 系统设计（中文 Chinese）
 results/     精选结果 JSON — 每个数字可溯源 every number traceable（results/INDEX.md）
