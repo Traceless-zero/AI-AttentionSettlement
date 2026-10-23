@@ -45,6 +45,6 @@
 | 第 0 步分歧检验（三问 Jaccard，动工闸门） | `step0_jaccard.json` |
 | 基座天花板探测（16K 直答 10 针） | `ceiling_probe.json` |
 
-## 未迁入（旧仓留档，按需索取）
+## 其余记录（未随仓收录，可按需索取）
 
 真实任务轴 k8s T2 系列（`realtask_t2*`）、DeepSeek 复现全套（`rep_ds_*` 其余）、锚阶梯（`anchor_arm*` 其余）、768K 长档、代码单元准备（`code_units_prep.json`）。语料对应关系见 `corpus/DATA_SOURCES.md`。

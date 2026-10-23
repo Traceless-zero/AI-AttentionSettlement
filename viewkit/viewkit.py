@@ -10,7 +10,7 @@ viewkit — 二级视图构建器
 
 它只做"造视图"，**不做计算、不替模型回答**。
 
-**默认模式是 turns**（用户裁定）：
+**默认模式是 turns**：
 
     turns    ：语料是对话回合格式（用户一句 + AI 一段）
                 → 视图 = 相关**整回合**，按原文顺序拼接，绝不拆句
@@ -86,7 +86,7 @@ def latest_user_turn(text):
 
 
 # 续说类短回复：直接跳过整个 viewkit（no-op）。
-# 理由（2026-10-22 用户定性）：这是**注意力管理工程**，不是检索。
+# 理由：这是**注意力管理工程**，不是检索。
 # 「继续」要接的内容本来就在对话尾部的天然高注意力区，系统再做任何事都是多余的。
 CONTINUE_WORDS = {
     "继续", "接着说", "接着", "往下", "然后呢", "还有呢", "继续吧", "说下去",
@@ -164,7 +164,7 @@ def pick_mode(question, forced=None):
     return "search"              # 两者都不是 → 语义检索（打分器）
 
 
-# 视图预算的**默认口径**：200K token（用户裁定——200K 仍在注意力舒适区）。
+# 视图预算的**默认口径**：200K token（200K 仍在注意力舒适区）。
 # 不传 budget 就按这个走；想不限得显式传一个更大的数。
 DEFAULT_BUDGET_TOKENS = 200_000
 
@@ -175,7 +175,7 @@ def build_view(text, question, mode="auto", budget=None, use_ce=False,
     spans 指回沉积层（行号），这是"下钻"的接口——今天只做到接口，没做交互"""
     text = normalize(text)
     sents = sentences(text)
-    # auto 的**默认出口是 turns**（用户裁定）——语料是回合格式就直接走二代主线；
+    # auto 的**默认出口是 turns**——语料是回合格式就直接走二代主线；
     # 只有非回合语料（针型语料、k8s 配置等一代实验语料）才退回 lookup/gather/search。
     if mode == "auto":
         mode = "turns" if has_turn_marks(text) else pick_mode(question)
@@ -222,7 +222,7 @@ def build_view(text, question, mode="auto", budget=None, use_ce=False,
                 "scores": [round(sc, 3) for _, sc, _ in r if sc is not None],
                 "note": "BM25 粗筛 + CE 精排选出的句子；分数低则由上层判不确定"}
 
-    # ---- gather_turns：回合级整块入选（用户口径：相关就整回合搬，绝不拆句）
+    # ---- gather_turns：回合级整块入选（相关就整回合搬，绝不拆句）
     if mode == "turns":
         from retriever import BM25
         units = parse_turns(text)

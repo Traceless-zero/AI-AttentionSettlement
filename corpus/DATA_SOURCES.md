@@ -12,8 +12,7 @@
     Conditional Memory via Scalable Lookup（2601.07372）
 - **变换**：页段抽取 → 行切分 → **合成针注入**（`NX-xxxx` 事实行为本项目原创合成内容，
   与原论文无关）→ 按实验设计做散点/聚簇/密度/打乱等布局变体。
-- 每份语料在实验 manifest 中登记 SHA256 与构建脚本；构建脚本随旧研究仓迁移（`fetch_arxiv_pdf.py`、
-  `build_calib_corpus.py`、`build_scattered.py` 等），可从 arXiv 原文一键重建。
+- 每份语料在实验记录中登记 SHA256；基底与变换规则如上（页段抽取 + 针注入），可从所列 arXiv 原文重建。
 - **用途与边界**：仅用于非商业研究的实验复现，逐篇注明出处。各论文在 arXiv 上的许可
   不一（每篇 abs 页有 "view license" 链接；已抽查 DeepSeek-V3 = arXiv 非独占分发许可 1.0，
   第三方再分发未获明示授权），发布前逐篇复核并做最终取舍（保留语料+归属+可移除，或只保留
