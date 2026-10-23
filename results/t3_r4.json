@@ -1,0 +1,88 @@
+{
+ "date": "2026-10-20",
+ "n": 9,
+ "ok": 4,
+ "rows": [
+  {
+   "sid": "S01",
+   "anchor": "full",
+   "dose": 1,
+   "gold": "examples-master\\AI\\vllm-deployment\\hpa\\prometheus-adapter.yaml",
+   "pick": "examples-master\\AI\\vllm-deployment\\hpa\\prometheus-adapter.yaml",
+   "raw": "examples-master\\AI\\vllm-deployment\\hpa\\prometheus-adapter.yaml",
+   "ok": true
+  },
+  {
+   "sid": "S02",
+   "anchor": "full",
+   "dose": 3,
+   "gold": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "raw": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "ok": true
+  },
+  {
+   "sid": "S03",
+   "anchor": "full",
+   "dose": 5,
+   "gold": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "raw": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "ok": true
+  },
+  {
+   "sid": "S09",
+   "anchor": "full",
+   "dose": 1,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+   "raw": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+   "ok": false
+  },
+  {
+   "sid": "S10",
+   "anchor": "full",
+   "dose": 3,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "raw": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "ok": false
+  },
+  {
+   "sid": "S11",
+   "anchor": "full",
+   "dose": 5,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "raw": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "ok": false
+  },
+  {
+   "sid": "S17",
+   "anchor": "full",
+   "dose": 1,
+   "gold": "examples-master\\_archived\\storm\\storm-worker-controller.yaml",
+   "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "raw": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "ok": false
+  },
+  {
+   "sid": "S18",
+   "anchor": "full",
+   "dose": 3,
+   "gold": "examples-master\\_archived\\volumes\\flexvolume\\deploy\\ds.yaml",
+   "pick": "?",
+   "raw": "examples-master_archived\\volumes\\flexvolume\\deploy\\ds.yaml",
+   "ok": false
+  },
+  {
+   "sid": "S19",
+   "anchor": "full",
+   "dose": 5,
+   "gold": "examples-master\\_archived\\volumes\\flocker\\flocker-pod-with-rc.yml",
+   "pick": "examples-master\\_archived\\volumes\\flocker\\flocker-pod-with-rc.yml",
+   "raw": "examples-master\\_archived\\volumes\\flocker\\flocker-pod-with-rc.yml",
+   "ok": true
+  }
+ ]
+}

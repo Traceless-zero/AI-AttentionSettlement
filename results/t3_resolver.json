@@ -1,0 +1,808 @@
+{
+ "date": "2026-10-20",
+ "n": 25,
+ "summary": {
+  "R0": {
+   "resolve_ok": "11/25",
+   "e2e": "11/25",
+   "abstain": 0
+  },
+  "R1": {
+   "resolve_ok": "8/25",
+   "e2e": "8/25",
+   "abstain": 0
+  },
+  "R2": {
+   "resolve_ok": "8/25",
+   "e2e": "8/25",
+   "abstain": 17
+  },
+  "R3": {
+   "resolve_ok": "15/25",
+   "e2e": "15/25",
+   "abstain": 0
+  },
+  "R5": {
+   "resolve_ok": "25/25",
+   "e2e": "25/25",
+   "abstain": 0
+  }
+ },
+ "rows": [
+  {
+   "sid": "S00",
+   "anchor": "full",
+   "dose": 0,
+   "gold": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S01",
+   "anchor": "full",
+   "dose": 1,
+   "gold": "examples-master\\AI\\vllm-deployment\\hpa\\prometheus-adapter.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\nginx-platform-app\\deployment.yml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\nginx-platform-app\\deployment.yml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\AI\\vllm-deployment\\hpa\\prometheus-adapter.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S02",
+   "anchor": "full",
+   "dose": 3,
+   "gold": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\storm\\storm-worker-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\web\\guestbook-go\\redis-master-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S03",
+   "anchor": "full",
+   "dose": 5,
+   "gold": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\storage\\hazelcast\\hazelcast-deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\nginx-platform-app\\deployment.yml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S04",
+   "anchor": "half",
+   "dose": 0,
+   "gold": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+   "R0": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S05",
+   "anchor": "half",
+   "dose": 1,
+   "gold": "examples-master\\_archived\\cockroachdb\\cockroachdb-statefulset.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\cockroachdb\\cockroachdb-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\cockroachdb\\cockroachdb-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\cockroachdb\\cockroachdb-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S06",
+   "anchor": "half",
+   "dose": 3,
+   "gold": "examples-master\\_archived\\elasticsearch\\es-rc.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\volumes\\nfs\\nfs-busybox-deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\volumes\\flocker\\flocker-pod-with-rc.yml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\web\\guestbook\\legacy\\frontend-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\elasticsearch\\es-rc.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S07",
+   "anchor": "half",
+   "dose": 5,
+   "gold": "examples-master\\_archived\\newrelic\\newrelic-daemonset.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\newrelic\\newrelic-daemonset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\volumes\\flexvolume\\deploy\\ds.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\newrelic\\newrelic-daemonset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\newrelic\\newrelic-daemonset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S08",
+   "anchor": "full",
+   "dose": 0,
+   "gold": "examples-master\\_archived\\nodesjs-mongodb\\web-controller-demo.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\nodesjs-mongodb\\web-controller-demo.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\_archived\\nodesjs-mongodb\\web-controller-demo.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\nodesjs-mongodb\\web-controller-demo.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\nodesjs-mongodb\\web-controller-demo.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S09",
+   "anchor": "full",
+   "dose": 1,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S10",
+   "anchor": "full",
+   "dose": 3,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\AI\\model-serving-tensorflow\\deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S11",
+   "anchor": "full",
+   "dose": 5,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\nginx-platform-app\\deployment.yml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S12",
+   "anchor": "half",
+   "dose": 0,
+   "gold": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-discovery-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S13",
+   "anchor": "half",
+   "dose": 1,
+   "gold": "examples-master\\_archived\\spark\\zeppelin-controller.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\spark\\zeppelin-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\elasticsearch\\es-rc.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\spark\\zeppelin-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\spark\\zeppelin-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S14",
+   "anchor": "half",
+   "dose": 3,
+   "gold": "examples-master\\_archived\\storage\\hazelcast\\hazelcast-deployment.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\storage\\hazelcast\\hazelcast-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\openshift-origin\\etcd-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\storage\\hazelcast\\hazelcast-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\storage\\hazelcast\\hazelcast-deployment.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S15",
+   "anchor": "half",
+   "dose": 5,
+   "gold": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S16",
+   "anchor": "full",
+   "dose": 0,
+   "gold": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\storage\\vitess\\vtctld-service.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S17",
+   "anchor": "full",
+   "dose": 1,
+   "gold": "examples-master\\_archived\\storm\\storm-worker-controller.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\AI\\vllm-deployment\\vllm-deployment.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\storm\\storm-worker-controller.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S18",
+   "anchor": "full",
+   "dose": 3,
+   "gold": "examples-master\\_archived\\volumes\\flexvolume\\deploy\\ds.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\newrelic-infrastructure\\newrelic-infra-daemonset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\newrelic\\newrelic-daemonset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\newrelic\\newrelic-daemonset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\volumes\\flexvolume\\deploy\\ds.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S19",
+   "anchor": "full",
+   "dose": 5,
+   "gold": "examples-master\\_archived\\volumes\\flocker\\flocker-pod-with-rc.yml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\web\\guestbook\\legacy\\frontend-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\web\\guestbook\\legacy\\frontend-controller.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\volumes\\flocker\\flocker-pod-with-rc.yml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S20",
+   "anchor": "half",
+   "dose": 0,
+   "gold": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+   "R0": {
+    "pick": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S21",
+   "anchor": "half",
+   "dose": 1,
+   "gold": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+   "R0": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\cockroachdb\\cockroachdb-statefulset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S22",
+   "anchor": "half",
+   "dose": 3,
+   "gold": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+   "R0": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\cockroachdb\\cockroachdb-statefulset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S23",
+   "anchor": "half",
+   "dose": 5,
+   "gold": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+   "R0": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R1": {
+    "pick": "examples-master\\_archived\\volumes\\vsphere\\simple-statefulset.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R2": {
+    "pick": null,
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R3": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  },
+  {
+   "sid": "S24",
+   "anchor": "full",
+   "dose": 0,
+   "gold": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+   "R0": {
+    "pick": "examples-master\\web\\guestbook\\redis-replica-service.yaml",
+    "resolve_ok": false,
+    "e2e": false
+   },
+   "R1": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R2": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R3": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   },
+   "R5": {
+    "pick": "examples-master\\databases\\cassandra\\cassandra-statefulset.yaml",
+    "resolve_ok": true,
+    "e2e": true
+   }
+  }
+ ]
+}

@@ -12,6 +12,9 @@
     Conditional Memory via Scalable Lookup（2601.07372）
 - **变换**：页段抽取 → 行切分 → **合成针注入**（`NX-xxxx` 事实行为本项目原创合成内容，
   与原论文无关）→ 按实验设计做散点/聚簇/密度/打乱等布局变体。
+- **长度阶梯与 1M 语料**的基底为**论文集**（22 篇公开 arXiv 模型/系统报告：Gemini 1.0/1.5、
+  Llama 2/3、Qwen2/2.5/3、Mistral/Mixtral、Gemma、Phi-3/4、Kimi K1.5 等），
+  完整清单见 [CORPUS_SOURCES.md](CORPUS_SOURCES.md)。
 - 每份语料在实验记录中登记 SHA256；基底与变换规则如上（页段抽取 + 针注入），可从所列 arXiv 原文重建。
 - **用途与边界**：仅用于非商业研究的实验复现，逐篇注明出处。各论文在 arXiv 上的许可
   不一（每篇 abs 页有 "view license" 链接；已抽查 DeepSeek-V3 = arXiv 非独占分发许可 1.0，

@@ -1,0 +1,206 @@
+{
+ "date": "2026-10-18",
+ "stage": "anchor_arm",
+ "model": "glm-4.7-flash",
+ "thinking": "disabled",
+ "details": [
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "EP-4318",
+   "depth": 0.25,
+   "question": "At which facility is the liaison officer for archive EP-4318 stationed?",
+   "answer": "FE-2846",
+   "baseline": true,
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FT-1063",
+   "hit": false,
+   "elapsed": 68.6
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "GR-6502",
+   "depth": 0.5,
+   "question": "At which facility is the liaison officer for archive GR-6502 stationed?",
+   "answer": "FG-7604",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FT-1063",
+   "hit": false,
+   "elapsed": 69.9
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "HS-8257",
+   "depth": 0.75,
+   "question": "At which facility is the liaison officer for archive HS-8257 stationed?",
+   "answer": "FH-3416",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FH-3416",
+   "hit": true,
+   "elapsed": 32.8
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "LV-7403",
+   "depth": 0.6,
+   "question": "Which central depot does the facility linked to archive LV-7403 report to?",
+   "answer": "DL-2107",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "DL-2107",
+   "hit": true,
+   "elapsed": 106.7
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "TB-4317",
+   "depth": 0.15,
+   "question": "At which facility is the liaison officer for archive TB-4317 stationed?",
+   "answer": "FT-1063",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FT-1063",
+   "hit": true,
+   "elapsed": 61.4
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "UC-6702",
+   "depth": 0.35,
+   "question": "At which facility is the liaison officer for archive UC-6702 stationed?",
+   "answer": "FU-7504",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FT-1063",
+   "hit": false,
+   "elapsed": 50.1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "VD-1295",
+   "depth": 0.55,
+   "question": "At which facility is the liaison officer for archive VD-1295 stationed?",
+   "answer": "FV-3187",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FT-1063",
+   "hit": false,
+   "elapsed": 119.5
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "WE-8630",
+   "depth": 0.65,
+   "question": "At which facility is the liaison officer for archive WE-8630 stationed?",
+   "answer": "FW-2495",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "FW-2495",
+   "hit": true,
+   "elapsed": 102.4
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "XF-3824",
+   "depth": 0.45,
+   "question": "Which central depot does the facility linked to archive XF-3824 report to?",
+   "answer": "DX-5216",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "DX-5216",
+   "hit": true,
+   "elapsed": 57.9
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "YG-5491",
+   "depth": 0.8,
+   "question": "Which central depot does the facility linked to archive YG-5491 report to?",
+   "answer": "DY-3079",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "DY-3079",
+   "hit": true,
+   "elapsed": 125.0
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-1051",
+   "depth": 0.800221770467566,
+   "question": "What is the total number of entries recorded for minor archive NX-1051?",
+   "answer": "6028",
+   "baseline": true,
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "6028",
+   "hit": true,
+   "elapsed": 37.0
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-2263",
+   "depth": 0.8007761966364813,
+   "question": "What is the total number of entries recorded for minor archive NX-2263?",
+   "answer": "4735",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "4735",
+   "hit": true,
+   "elapsed": 68.6
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-3377",
+   "depth": 0.8017002402513399,
+   "question": "What is the total number of entries recorded for minor archive NX-3377?",
+   "answer": "8914",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "8914",
+   "hit": true,
+   "elapsed": 28.0
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-4489",
+   "depth": 0.8031787100351137,
+   "question": "What is the total number of entries recorded for minor archive NX-4489?",
+   "answer": "1562",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "8914",
+   "hit": false,
+   "elapsed": 3.3
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-5593",
+   "depth": 0.8031787100351137,
+   "question": "What is the total number of entries recorded for minor archive NX-5593?",
+   "answer": "7308",
+   "answer_occurrences": 1,
+   "chars": 514747,
+   "model_reply": "7308",
+   "hit": true,
+   "elapsed": 3.6
+  }
+ ],
+ "baselines": [
+  {
+   "pair": "EP-4318",
+   "want": "FE-2846",
+   "model_reply": "FE-2846",
+   "hit": true,
+   "elapsed": 0.7
+  },
+  {
+   "pair": "NX-1051",
+   "want": "6028",
+   "model_reply": "6028",
+   "hit": true,
+   "elapsed": 0.8
+  }
+ ]
+}

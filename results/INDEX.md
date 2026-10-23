@@ -36,6 +36,20 @@
 | 电池 A（glm-4.7-flash 密簇：31 错误全单值泄漏，30 次同一值 4472） | `anchor_arm_adj2.json`、`anchor_arm_adj2h.json`、`anchor_arm_adj2k.json` |
 | 相对预算悬崖 r=0.25/0.20（119 回合真实语料 18 题） | `eval_ratio.json` |
 
+## 指称侧在场（T3 resolver）
+
+| 主张 | 文件 |
+|---|---|
+| R4 LLM 关键格 4/9，Wilson CI [18.9%, 73.3%] 排除"LLM 可靠解" | `t3_r4.json` |
+| R0–R5 五臂 + 弃权重读（R2 静默答错 0 / 覆盖率 68%） | `t3_resolver.json` |
+
+## 真实载体与锚
+
+| 主张 | 文件 |
+|---|---|
+| 注入判别 23/26 = 88.5%：强塌排除（裕量 2.2pp）、强保护未确证（差 1.4 题） | `inject16_direct.json` |
+| 锚反向臂（散文 40% / 仅键名 40% / 空边界 55% / 边界带 id 75%） | `anchor_arm.json` |
+
 ## 翻案与纪律
 
 | 主张 | 文件 |
