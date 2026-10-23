@@ -1,0 +1,39 @@
+{
+ "date": "2026-10-21",
+ "geometry_mode": "clustered",
+ "n_clusters": 1,
+ "values": [
+  7505,
+  1377,
+  7445,
+  7825,
+  6346
+ ],
+ "grid": [
+  {
+   "pair": "AGG5_sum",
+   "question": "What is the total of all entry counts reported for the archives in this document?",
+   "answer": "30498"
+  },
+  {
+   "pair": "AGG5_max",
+   "question": "What is the largest entry count reported for any archive in this document?",
+   "answer": "7825"
+  },
+  {
+   "pair": "AGG5_gt4000",
+   "question": "How many archives in this document hold more than 4000 entries?",
+   "answer": "4"
+  },
+  {
+   "pair": "AGG5_lt3000",
+   "question": "How many archives in this document hold fewer than 3000 entries?",
+   "answer": "1"
+  },
+  {
+   "pair": "AGG5_count",
+   "question": "How many archives are described in this document?",
+   "answer": "5"
+  }
+ ]
+}

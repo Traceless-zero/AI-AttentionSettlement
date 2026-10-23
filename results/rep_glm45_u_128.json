@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "07eb307b14f8b5b7",
+  "grid": "e7961c7365d88431"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG5_sum",
+   "want": "30498",
+   "got": "6346",
+   "raw": "6346",
+   "ts": "2026-10-21T15:19:37",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129688,
+    "prompt_tokens_details": {
+     "cached_tokens": 7563
+    },
+    "total_tokens": 129692
+   },
+   "elapsed": 32.3,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_max",
+   "want": "7825",
+   "got": "7825",
+   "raw": "7825",
+   "ts": "2026-10-21T15:19:47",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129686,
+    "prompt_tokens_details": {
+     "cached_tokens": 129668
+    },
+    "total_tokens": 129690
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_gt4000",
+   "want": "4",
+   "got": "5",
+   "raw": "5",
+   "ts": "2026-10-21T15:19:56",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129686,
+    "prompt_tokens_details": {
+     "cached_tokens": 129665
+    },
+    "total_tokens": 129688
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_lt3000",
+   "want": "1",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T15:20:06",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129686,
+    "prompt_tokens_details": {
+     "cached_tokens": 129672
+    },
+    "total_tokens": 129688
+   },
+   "elapsed": 1.5,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_count",
+   "want": "5",
+   "got": "6346",
+   "raw": "6346",
+   "ts": "2026-10-21T15:20:16",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129681,
+    "prompt_tokens_details": {
+     "cached_tokens": 129668
+    },
+    "total_tokens": 129685
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

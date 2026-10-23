@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "c02a96386ac76a29"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG_over7000",
+   "want": "6",
+   "got": "7020",
+   "raw": "7020",
+   "ts": "2026-10-21T15:06:30",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129980
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

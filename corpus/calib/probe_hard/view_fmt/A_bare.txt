@@ -1,0 +1,20 @@
+A registry entry for NX-7001 reports 3242 entries after the most recent audit.
+NX-7002 currently lists 2947 entries; earlier counts were superseded by later audits.
+NX-7003 currently lists 9536 entries; earlier counts were superseded by later audits.
+NX-7004 currently lists 1795 entries; earlier counts were superseded by later audits.
+Archive NX-7005, catalogued in revision cycle 14, holds 9564 entries after deduplication.
+A registry entry for NX-7006 reports 1731 entries after the most recent audit.
+A registry entry for NX-7007 reports 4310 entries after the most recent audit.
+NX-7008 currently lists 3061 entries; earlier counts were superseded by later audits.
+NX-7009 currently lists 1752 entries; earlier counts were superseded by later audits.
+The records for NX-7010 total 5359 entries, as noted in the catalogue appendix.
+A registry entry for NX-7011 reports 6768 entries after the most recent audit.
+Per the registry, NX-7012 retains 4545 entries following the deduplication pass.
+A registry entry for NX-7013 reports 9267 entries after the most recent audit.
+Archive NX-7014, catalogued in revision cycle 20, holds 8292 entries after deduplication.
+Per the registry, NX-7015 retains 6873 entries following the deduplication pass.
+A registry entry for NX-7016 reports 1552 entries after the most recent audit.
+NX-7017 currently lists 2055 entries; earlier counts were superseded by later audits.
+NX-7018 currently lists 8085 entries; earlier counts were superseded by later audits.
+NX-7019 currently lists 3965 entries; earlier counts were superseded by later audits.
+A registry entry for NX-7020 reports 7796 entries after the most recent audit.

@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-16",
+  "stage": "step0_divergence_check",
+  "corpus": "engram_main.txt (375 sent)",
+  "model": "BAAI/bge-reranker-v2-m3 (local, ModelScope)",
+  "batch_size": 16,
+  "primary_k": 20,
+  "gate_fail_if": "any pairwise Jaccard > 0.8 (primary K=20)",
+  "jaccard": {
+    "10": {
+      "Q1-Q2": 0.0526,
+      "Q1-Q3": 0.0,
+      "Q2-Q3": 0.0
+    },
+    "20": {
+      "Q1-Q2": 0.0526,
+      "Q1-Q3": 0.0256,
+      "Q2-Q3": 0.1429
+    },
+    "40": {
+      "Q1-Q2": 0.1268,
+      "Q1-Q3": 0.2308,
+      "Q2-Q3": 0.2308
+    },
+    "47": {
+      "Q1-Q2": 0.1325,
+      "Q1-Q3": 0.2051,
+      "Q2-Q3": 0.2877
+    }
+  },
+  "top_sentences": {
+    "Q1": {
+      "top20": [
+        52,
+        158,
+        49,
+        252,
+        127,
+        284,
+        167,
+        133,
+        156,
+        113,
+        153,
+        222,
+        125,
+        25,
+        254,
+        138,
+        182,
+        135,
+        48,
+        296
+      ],
+      "top1": 52,
+      "top1_score": 0.9996,
+      "top1_text": "In practice, this process achieves a 23% reduction in the effective vocabulary size for a 128k token",
+      "gold_sent": 52,
+      "gold_in_top20": true
+    },
+    "Q2": {
+      "top20": [
+        168,
+        154,
+        221,
+        219,
+        203,
+        222,
+        169,
+        184,
+        156,
+        270,
+        152,
+        28,
+        70,
+        201,
+        144,
+        323,
+        213,
+        266,
+        200,
+        4
+      ],
+      "top1": 168,
+      "top1_score": 0.9848,
+      "top1_text": "Regarding the Engram configuration, we instantiate the module at layers 2 and 15 and set the maximum",
+      "gold_sent": 168,
+      "gold_in_top20": true
+    },
+    "Q3": {
+      "top20": [
+        304,
+        311,
+        35,
+        310,
+        75,
+        374,
+        273,
+        302,
+        144,
+        155,
+        156,
+        100,
+        267,
+        70,
+        262,
+        169,
+        143,
+        184,
+        85,
+        8
+      ],
+      "top1": 304,
+      "top1_score": 0.9987,
+      "top1_text": "As detailed in Table 4, offloading a 100B-parameter embedding table incurs a negligible throughput p",
+      "gold_sent": 304,
+      "gold_in_top20": true
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "1fa834c37d332b40",
+  "grid": "c534e18ae341b0ff"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG5_sum",
+   "want": "25676",
+   "got": "001",
+   "raw": "001",
+   "ts": "2026-10-21T15:18:28",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 36702,
+    "prompt_tokens_details": {
+     "cached_tokens": 6480
+    },
+    "total_tokens": 36704
+   },
+   "elapsed": 4.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_max",
+   "want": "7082",
+   "got": "72004",
+   "raw": "72004",
+   "ts": "2026-10-21T15:18:37",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 36700,
+    "prompt_tokens_details": {
+     "cached_tokens": 36682
+    },
+    "total_tokens": 36703
+   },
+   "elapsed": 0.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_gt4000",
+   "want": "4",
+   "got": "3",
+   "raw": "3",
+   "ts": "2026-10-21T15:18:46",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 36700,
+    "prompt_tokens_details": {
+     "cached_tokens": 36679
+    },
+    "total_tokens": 36702
+   },
+   "elapsed": 1.0,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_lt3000",
+   "want": "1",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T15:18:54",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 36700,
+    "prompt_tokens_details": {
+     "cached_tokens": 36686
+    },
+    "total_tokens": 36702
+   },
+   "elapsed": 0.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_count",
+   "want": "5",
+   "got": "001",
+   "raw": "001",
+   "ts": "2026-10-21T15:19:03",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 36695,
+    "prompt_tokens_details": {
+     "cached_tokens": 36682
+    },
+    "total_tokens": 36697
+   },
+   "elapsed": 0.8,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

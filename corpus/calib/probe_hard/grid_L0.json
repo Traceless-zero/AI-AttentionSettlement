@@ -1,0 +1,38 @@
+{
+ "date": "2026-10-20",
+ "tier": "L0",
+ "geometry_mode": "scattered",
+ "n_clusters": 20,
+ "grid": [
+  {
+   "pair": "NX-9901",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9901?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9902",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9902?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9903",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9903?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9904",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9904?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9905",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9905?",
+   "answer": "UNKNOWN"
+  }
+ ]
+}

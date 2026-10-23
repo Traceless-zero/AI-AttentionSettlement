@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "b1a238871ffcfcc4",
+  "grid": "0eadcf2fee7163e8"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "NX-9901",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:25:55",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 7296
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 32.1,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9902",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:26:05",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9903",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:26:15",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9904",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:26:24",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9905",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:26:34",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

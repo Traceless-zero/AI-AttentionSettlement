@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-17",
+  "rule": "B128-v1（10链复用+5邻针；串零出现；GLM-5.3 '直接测128K'）",
+  "grid": [
+    {
+      "doc": "calib_128k_b",
+      "pair": "EP-4318",
+      "depth": 0.25,
+      "question": "At which facility is the liaison officer for archive EP-4318 stationed?",
+      "answer": "FE-2846",
+      "baseline": true
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "GR-6502",
+      "depth": 0.5,
+      "question": "At which facility is the liaison officer for archive GR-6502 stationed?",
+      "answer": "FG-7604"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "HS-8257",
+      "depth": 0.75,
+      "question": "At which facility is the liaison officer for archive HS-8257 stationed?",
+      "answer": "FH-3416"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "LV-7403",
+      "depth": 0.6,
+      "question": "Which central depot does the facility linked to archive LV-7403 report to?",
+      "answer": "DL-2107"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "TB-4317",
+      "depth": 0.15,
+      "question": "At which facility is the liaison officer for archive TB-4317 stationed?",
+      "answer": "FT-1063"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "UC-6702",
+      "depth": 0.35,
+      "question": "At which facility is the liaison officer for archive UC-6702 stationed?",
+      "answer": "FU-7504"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "VD-1295",
+      "depth": 0.55,
+      "question": "At which facility is the liaison officer for archive VD-1295 stationed?",
+      "answer": "FV-3187"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "WE-8630",
+      "depth": 0.65,
+      "question": "At which facility is the liaison officer for archive WE-8630 stationed?",
+      "answer": "FW-2495"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "XF-3824",
+      "depth": 0.45,
+      "question": "Which central depot does the facility linked to archive XF-3824 report to?",
+      "answer": "DX-5216"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "YG-5491",
+      "depth": 0.8,
+      "question": "Which central depot does the facility linked to archive YG-5491 report to?",
+      "answer": "DY-3079"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "NX-1051",
+      "depth": 0.800221770467566,
+      "question": "What is the total number of entries recorded for minor archive NX-1051?",
+      "answer": "6028",
+      "baseline": true
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "NX-2263",
+      "depth": 0.8007761966364813,
+      "question": "What is the total number of entries recorded for minor archive NX-2263?",
+      "answer": "4735"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "NX-3377",
+      "depth": 0.8017002402513399,
+      "question": "What is the total number of entries recorded for minor archive NX-3377?",
+      "answer": "8914"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "NX-4489",
+      "depth": 0.8031787100351137,
+      "question": "What is the total number of entries recorded for minor archive NX-4489?",
+      "answer": "1562"
+    },
+    {
+      "doc": "calib_128k_b",
+      "pair": "NX-5593",
+      "depth": 0.8031787100351137,
+      "question": "What is the total number of entries recorded for minor archive NX-5593?",
+      "answer": "7308"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6042",
+      "depth": 0.800221770467566,
+      "question": "What is the total number of entries recorded for minor archive NX-6042?",
+      "answer": "6287"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6179",
+      "depth": 0.8007761966364813,
+      "question": "What is the total number of entries recorded for minor archive NX-6179?",
+      "answer": "2970"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6316",
+      "depth": 0.8017002402513399,
+      "question": "What is the total number of entries recorded for minor archive NX-6316?",
+      "answer": "4472"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6453",
+      "depth": 0.8031787100351137,
+      "question": "What is the total number of entries recorded for minor archive NX-6453?",
+      "answer": "8701"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6590",
+      "depth": 0.8035483274810571,
+      "question": "What is the total number of entries recorded for minor archive NX-6590?",
+      "answer": "5794"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6727",
+      "depth": 0.8041027536499723,
+      "question": "What is the total number of entries recorded for minor archive NX-6727?",
+      "answer": "5371"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6864",
+      "depth": 0.805026797264831,
+      "question": "What is the total number of entries recorded for minor archive NX-6864?",
+      "answer": "1453"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6101",
+      "depth": 0.8065052670486047,
+      "question": "What is the total number of entries recorded for minor archive NX-6101?",
+      "answer": "6713"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6238",
+      "depth": 0.8068748844945481,
+      "question": "What is the total number of entries recorded for minor archive NX-6238?",
+      "answer": "3257"
+    },
+    {
+      "doc": "calib_128k_adj2",
+      "pair": "NX-6375",
+      "depth": 0.8074293106634634,
+      "question": "What is the total number of entries recorded for minor archive NX-6375?",
+      "answer": "1090"
+    },
+    {
+      "doc": "calib_128k_sparse",
+      "pair": "NX-7031",
+      "depth": 0.818333025318795,
+      "question": "What is the total number of entries recorded for minor archive NX-7031?",
+      "answer": "5818"
+    },
+    {
+      "doc": "calib_128k_sparse",
+      "pair": "NX-7204",
+      "depth": 0.8368138976159675,
+      "question": "What is the total number of entries recorded for minor archive NX-7204?",
+      "answer": "8212"
+    },
+    {
+      "doc": "calib_128k_sparse",
+      "pair": "NX-7377",
+      "depth": 0.8552947699131399,
+      "question": "What is the total number of entries recorded for minor archive NX-7377?",
+      "answer": "5445"
+    },
+    {
+      "doc": "calib_128k_sparse",
+      "pair": "NX-7550",
+      "depth": 0.8737756422103123,
+      "question": "What is the total number of entries recorded for minor archive NX-7550?",
+      "answer": "6174"
+    },
+    {
+      "doc": "calib_128k_sparse",
+      "pair": "NX-7723",
+      "depth": 0.8922565145074848,
+      "question": "What is the total number of entries recorded for minor archive NX-7723?",
+      "answer": "2264"
+    },
+    {
+      "doc": "calib_128k_lowdose",
+      "pair": "NX-9014",
+      "depth": 0.8013306228053965,
+      "question": "What is the total number of entries recorded for minor archive NX-9014?",
+      "answer": "7305"
+    },
+    {
+      "doc": "calib_128k_lowdose",
+      "pair": "NX-9273",
+      "depth": 0.8028090925891702,
+      "question": "What is the total number of entries recorded for minor archive NX-9273?",
+      "answer": "1177"
+    }
+  ]
+}

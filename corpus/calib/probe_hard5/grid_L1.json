@@ -1,0 +1,32 @@
+{
+ "date": "2026-10-21",
+ "geometry_mode": "scattered",
+ "n_clusters": 5,
+ "grid": [
+  {
+   "pair": "NX-7100",
+   "question": "What is the entry count reported for archive NX-7100?",
+   "answer": "7505"
+  },
+  {
+   "pair": "NX-7101",
+   "question": "What is the entry count reported for archive NX-7101?",
+   "answer": "1377"
+  },
+  {
+   "pair": "NX-7102",
+   "question": "What is the entry count reported for archive NX-7102?",
+   "answer": "7445"
+  },
+  {
+   "pair": "NX-7103",
+   "question": "What is the entry count reported for archive NX-7103?",
+   "answer": "7825"
+  },
+  {
+   "pair": "NX-7104",
+   "question": "What is the entry count reported for archive NX-7104?",
+   "answer": "6346"
+  }
+ ]
+}

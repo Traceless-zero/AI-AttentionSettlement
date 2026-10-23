@@ -1,0 +1,57 @@
+{
+ "date": "2026-10-21",
+ "geometry_mode": "clustered",
+ "n_clusters": 1,
+ "grid": [
+  {
+   "pair": "NX-6042",
+   "question": "What is the total number of entries recorded for minor archive NX-6042?",
+   "answer": "6287"
+  },
+  {
+   "pair": "NX-6179",
+   "question": "What is the total number of entries recorded for minor archive NX-6179?",
+   "answer": "2970"
+  },
+  {
+   "pair": "NX-6316",
+   "question": "What is the total number of entries recorded for minor archive NX-6316?",
+   "answer": "4472"
+  },
+  {
+   "pair": "NX-6453",
+   "question": "What is the total number of entries recorded for minor archive NX-6453?",
+   "answer": "8701"
+  },
+  {
+   "pair": "NX-6590",
+   "question": "What is the total number of entries recorded for minor archive NX-6590?",
+   "answer": "5794"
+  },
+  {
+   "pair": "NX-6727",
+   "question": "What is the total number of entries recorded for minor archive NX-6727?",
+   "answer": "5371"
+  },
+  {
+   "pair": "NX-6864",
+   "question": "What is the total number of entries recorded for minor archive NX-6864?",
+   "answer": "1453"
+  },
+  {
+   "pair": "NX-6101",
+   "question": "What is the total number of entries recorded for minor archive NX-6101?",
+   "answer": "6713"
+  },
+  {
+   "pair": "NX-6238",
+   "question": "What is the total number of entries recorded for minor archive NX-6238?",
+   "answer": "3257"
+  },
+  {
+   "pair": "NX-6375",
+   "question": "What is the total number of entries recorded for minor archive NX-6375?",
+   "answer": "1090"
+  }
+ ]
+}

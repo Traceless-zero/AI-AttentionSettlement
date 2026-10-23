@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "0eadcf2fee7163e8"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "NX-9901",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:02:39",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129956
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9902",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:02:49",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.5,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9903",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:02:58",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9904",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:03:08",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 2.0,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9905",
+   "want": "UNKNOWN",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:03:18",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.7,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

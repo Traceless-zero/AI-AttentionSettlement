@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "deepseek-flash",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "f3428865fd01e832"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG_sum",
+   "want": "102495",
+   "got": "3242 + 2947 + 9536 + 1795 + 1731 + 9564 + 4310 + 3061 + 1752",
+   "raw": "3242 + 2947 + 9536 + 1795 + 1731 + 9564 + 4310 + 3061 + 1752 + 5359 + 6768 + 4545 + 9267 + 8292 + 6873 + 1552 + 2055 + 8085 + 3965 + 7796 = 100,  let's sum carefully:\n\n3242\n+2947 = 6189\n+9536 = 15725\n+1795 = 17520\n+1731 = 19251\n+9564 = 28815\n+4310 = 33125\n+3061 = 36186\n+1752 = 37938\n+5359 = 43297\n+6768 = 50065\n+4545 = 54610\n+9267 = 63877\n+8292 = 72169\n+6873 = 79042\n+1552 = 80594\n+2055 = 82649\n+8085 = 90734\n+3965 = 94699\n+7796 = 102495\n\n102495",
+   "ts": "2026-10-21T19:18:54",
+   "hit": true,
+   "usage": {
+    "prompt_tokens": 129076,
+    "completion_tokens": 245,
+    "total_tokens": 129321,
+    "prompt_tokens_details": {
+     "cached_tokens": 128896
+    },
+    "prompt_cache_hit_tokens": 128896,
+    "prompt_cache_miss_tokens": 180
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

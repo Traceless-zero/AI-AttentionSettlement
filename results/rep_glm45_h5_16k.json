@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "7f4cbea566dd104d",
+  "grid": "9bc3879e46547830"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG5_sum",
+   "want": "31484",
+   "got": "3151",
+   "raw": "3151",
+   "ts": "2026-10-21T15:15:36",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 18076,
+    "prompt_tokens_details": {
+     "cached_tokens": 2644
+    },
+    "total_tokens": 18079
+   },
+   "elapsed": 2.3,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_max",
+   "want": "9585",
+   "got": "9585",
+   "raw": "9585",
+   "ts": "2026-10-21T15:15:44",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 18074,
+    "prompt_tokens_details": {
+     "cached_tokens": 18056
+    },
+    "total_tokens": 18078
+   },
+   "elapsed": 0.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_gt4000",
+   "want": "3",
+   "got": "3",
+   "raw": "3",
+   "ts": "2026-10-21T15:15:53",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 18074,
+    "prompt_tokens_details": {
+     "cached_tokens": 18053
+    },
+    "total_tokens": 18076
+   },
+   "elapsed": 0.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_lt3000",
+   "want": "1",
+   "got": "1",
+   "raw": "1",
+   "ts": "2026-10-21T15:16:02",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 18074,
+    "prompt_tokens_details": {
+     "cached_tokens": 18060
+    },
+    "total_tokens": 18076
+   },
+   "elapsed": 0.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_count",
+   "want": "5",
+   "got": "4",
+   "raw": "4",
+   "ts": "2026-10-21T15:16:10",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 18069,
+    "prompt_tokens_details": {
+     "cached_tokens": 18056
+    },
+    "total_tokens": 18071
+   },
+   "elapsed": 0.7,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

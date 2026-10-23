@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-17",
+  "rule": "manual-view POC（A=±2行纯净 / B=±15行邻域；干扰针物理排除）",
+  "grid": [
+    {
+      "doc": "view_NX-6590_A",
+      "pair": "NX-6590",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6590?",
+      "answer": "5794"
+    },
+    {
+      "doc": "view_NX-6590_B",
+      "pair": "NX-6590",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6590?",
+      "answer": "5794"
+    },
+    {
+      "doc": "view_NX-6864_A",
+      "pair": "NX-6864",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6864?",
+      "answer": "1453"
+    },
+    {
+      "doc": "view_NX-6864_B",
+      "pair": "NX-6864",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6864?",
+      "answer": "1453"
+    },
+    {
+      "doc": "view_NX-6101_A",
+      "pair": "NX-6101",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6101?",
+      "answer": "6713"
+    },
+    {
+      "doc": "view_NX-6101_B",
+      "pair": "NX-6101",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6101?",
+      "answer": "6713"
+    },
+    {
+      "doc": "view_NX-1051_B",
+      "pair": "NX-1051",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-1051?",
+      "answer": "6028"
+    },
+    {
+      "doc": "view_NX-2263_B",
+      "pair": "NX-2263",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-2263?",
+      "answer": "4735"
+    },
+    {
+      "doc": "view_NX-3377_B",
+      "pair": "NX-3377",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-3377?",
+      "answer": "8914"
+    },
+    {
+      "doc": "view_NX-4489_B",
+      "pair": "NX-4489",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-4489?",
+      "answer": "1562"
+    },
+    {
+      "doc": "view_NX-5593_B",
+      "pair": "NX-5593",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-5593?",
+      "answer": "7308"
+    },
+    {
+      "doc": "view_NX-6042_B",
+      "pair": "NX-6042",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6042?",
+      "answer": "6287"
+    },
+    {
+      "doc": "view_NX-6179_B",
+      "pair": "NX-6179",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6179?",
+      "answer": "2970"
+    },
+    {
+      "doc": "view_NX-6316_B",
+      "pair": "NX-6316",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6316?",
+      "answer": "4472"
+    },
+    {
+      "doc": "view_NX-6453_B",
+      "pair": "NX-6453",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6453?",
+      "answer": "8701"
+    },
+    {
+      "doc": "view_NX-6727_B",
+      "pair": "NX-6727",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6727?",
+      "answer": "5371"
+    },
+    {
+      "doc": "view_NX-6238_B",
+      "pair": "NX-6238",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6238?",
+      "answer": "3257"
+    },
+    {
+      "doc": "view_NX-6375_B",
+      "pair": "NX-6375",
+      "depth": 0.5,
+      "question": "What is the total number of entries recorded for minor archive NX-6375?",
+      "answer": "1090"
+    }
+  ]
+}

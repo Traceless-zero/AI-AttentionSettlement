@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "deepseek-flash",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "f3428865fd01e832"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG_sum",
+   "want": "102495",
+   "got": "Let me find all the archive entry counts mentioned in the do",
+   "raw": "Let me find all the archive entry counts mentioned in the documents:\n\n1. NX-7001: 3242 entries\n2. NX-7002: 2947 entries\n3. NX-7003: 9536 entries\n4. NX-7004: 1795 entries\n5. NX-7005: 9564 entries\n6. NX-7006: 1731 entries\n7. NX-7007: 4310 entries\n8. NX-7008: 3061 entries\n9. NX-7009: 1752 entries\n10. NX-7010: 5359 entries\n11. NX-7011: 6768 entries\n12. NX-7012: 4545 entries\n13. NX-7013: 9267 entries\n14. NX-7014: 8292 entries\n15. NX-7015: 6873 entries\n16. NX-7016: 1552 entries\n17. NX-7017: 2055 entries\n18. NX-7018: 8085 entries\n19. NX-7019: 3965 entries\n20. NX-7020: 7796 entries\n\nSum: 3242 + 2947 + 9536 + 1795 + 9564 + 1731 + 4310 + 3061 + 1752 + 5359 + 6768 + 4545 + 9267 + 8292 + 6873 + 1552 + 2055 + 8085 + 3965 + 7796\n\nLet me add step by step:\n3242 + 2947 = 6189\n6189 + 9536 = 15725\n15725 + 1795 = 17520\n17520 + 9564 = 27084\n27084 + 1731 = 28815\n28815 + 4310 = 33125\n33125 + 3061 = 36186\n36186 + 1752 = 37938\n37938 + 5359 = 43297\n43297 + 6768 = 50065\n50065 + 4545 = 54610\n54610 + 9267 = 63877\n63877 + 8292 = 72169\n72169 + 6873 = 79042\n79042 + 1552 = 80594\n80594 + 2055 = 82649\n82649 + 8085 = 90734\n90734 + 3965 = 94699\n94699 + 7796 = 102495\n\n102495",
+   "ts": "2026-10-21T20:20:01",
+   "hit": true,
+   "usage": {
+    "prompt_tokens": 129076,
+    "completion_tokens": 573,
+    "total_tokens": 129649,
+    "prompt_tokens_details": {
+     "cached_tokens": 128896
+    },
+    "prompt_cache_hit_tokens": 128896,
+    "prompt_cache_miss_tokens": 180
+   },
+   "elapsed": 2.4,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

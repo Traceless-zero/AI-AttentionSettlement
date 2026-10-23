@@ -1,0 +1,327 @@
+{
+ "date": "2026-10-20",
+ "grid": [
+  {
+   "pair": "svc-8001",
+   "answer": "2555",
+   "image": "memcached:1.6",
+   "replicas": 4,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8001?"
+  },
+  {
+   "pair": "svc-8002",
+   "answer": "4141",
+   "image": "kafka:3.5",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8002?"
+  },
+  {
+   "pair": "svc-8003",
+   "answer": "7509",
+   "image": "nginx:1.25",
+   "replicas": 6,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8003?"
+  },
+  {
+   "pair": "svc-8004",
+   "answer": "4128",
+   "image": "redis:7.2",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8004?"
+  },
+  {
+   "pair": "svc-8005",
+   "answer": "1107",
+   "image": "etcd:3.5",
+   "replicas": 3,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8005?"
+  },
+  {
+   "pair": "svc-8006",
+   "answer": "7588",
+   "image": "postgres:16",
+   "replicas": 6,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8006?"
+  },
+  {
+   "pair": "svc-8007",
+   "answer": "9261",
+   "image": "mysql:8.0",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8007?"
+  },
+  {
+   "pair": "svc-8008",
+   "answer": "7585",
+   "image": "memcached:1.6",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8008?"
+  },
+  {
+   "pair": "svc-8009",
+   "answer": "3123",
+   "image": "postgres:16",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8009?"
+  },
+  {
+   "pair": "svc-8010",
+   "answer": "3572",
+   "image": "rabbitmq:3.12",
+   "replicas": 4,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8010?"
+  },
+  {
+   "pair": "svc-8011",
+   "answer": "7550",
+   "image": "postgres:16",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8011?"
+  },
+  {
+   "pair": "svc-8012",
+   "answer": "7445",
+   "image": "mongo:6.0",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8012?"
+  },
+  {
+   "pair": "svc-8013",
+   "answer": "4430",
+   "image": "nginx:1.25",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8013?"
+  },
+  {
+   "pair": "svc-8014",
+   "answer": "3961",
+   "image": "minio:latest",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8014?"
+  },
+  {
+   "pair": "svc-8015",
+   "answer": "5612",
+   "image": "rabbitmq:3.12",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8015?"
+  },
+  {
+   "pair": "svc-8016",
+   "answer": "8855",
+   "image": "redis:7.2",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8016?"
+  },
+  {
+   "pair": "svc-8017",
+   "answer": "6844",
+   "image": "mysql:8.0",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8017?"
+  },
+  {
+   "pair": "svc-8018",
+   "answer": "8443",
+   "image": "mysql:8.0",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8018?"
+  },
+  {
+   "pair": "svc-8019",
+   "answer": "7909",
+   "image": "minio:latest",
+   "replicas": 6,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8019?"
+  },
+  {
+   "pair": "svc-8020",
+   "answer": "8531",
+   "image": "memcached:1.6",
+   "replicas": 3,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8020?"
+  },
+  {
+   "pair": "svc-8021",
+   "answer": "8285",
+   "image": "mongo:6.0",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8021?"
+  },
+  {
+   "pair": "svc-8022",
+   "answer": "4908",
+   "image": "mysql:8.0",
+   "replicas": 4,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8022?"
+  },
+  {
+   "pair": "svc-8023",
+   "answer": "4547",
+   "image": "nginx:1.25",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8023?"
+  },
+  {
+   "pair": "svc-8024",
+   "answer": "1259",
+   "image": "mongo:6.0",
+   "replicas": 3,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8024?"
+  },
+  {
+   "pair": "svc-8025",
+   "answer": "1292",
+   "image": "rabbitmq:3.12",
+   "replicas": 3,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8025?"
+  },
+  {
+   "pair": "svc-8026",
+   "answer": "9536",
+   "image": "rabbitmq:3.12",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8026?"
+  },
+  {
+   "pair": "svc-8027",
+   "answer": "4216",
+   "image": "nginx:1.25",
+   "replicas": 3,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8027?"
+  },
+  {
+   "pair": "svc-8028",
+   "answer": "2046",
+   "image": "mongo:6.0",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8028?"
+  },
+  {
+   "pair": "svc-8029",
+   "answer": "3376",
+   "image": "mysql:8.0",
+   "replicas": 6,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8029?"
+  },
+  {
+   "pair": "svc-8030",
+   "answer": "6689",
+   "image": "rabbitmq:3.12",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8030?"
+  },
+  {
+   "pair": "svc-8031",
+   "answer": "3829",
+   "image": "minio:latest",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8031?"
+  },
+  {
+   "pair": "svc-8032",
+   "answer": "1813",
+   "image": "nginx:1.25",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8032?"
+  },
+  {
+   "pair": "svc-8033",
+   "answer": "2899",
+   "image": "memcached:1.6",
+   "replicas": 5,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8033?"
+  },
+  {
+   "pair": "svc-8034",
+   "answer": "3877",
+   "image": "etcd:3.5",
+   "replicas": 4,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8034?"
+  },
+  {
+   "pair": "svc-8035",
+   "answer": "8600",
+   "image": "minio:latest",
+   "replicas": 4,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8035?"
+  },
+  {
+   "pair": "svc-8036",
+   "answer": "9559",
+   "image": "memcached:1.6",
+   "replicas": 2,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8036?"
+  },
+  {
+   "pair": "svc-8037",
+   "answer": "9090",
+   "image": "kafka:3.5",
+   "replicas": 4,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8037?"
+  },
+  {
+   "pair": "svc-8038",
+   "answer": "3653",
+   "image": "postgres:16",
+   "replicas": 3,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8038?"
+  },
+  {
+   "pair": "svc-8039",
+   "answer": "5716",
+   "image": "kafka:3.5",
+   "replicas": 6,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8039?"
+  },
+  {
+   "pair": "svc-8040",
+   "answer": "1177",
+   "image": "etcd:3.5",
+   "replicas": 1,
+   "query_type": "L1",
+   "question": "How many audit entries are logged for deployment svc-8040?"
+  }
+ ],
+ "geometry_mode": "clustered",
+ "n_clusters": 1
+}

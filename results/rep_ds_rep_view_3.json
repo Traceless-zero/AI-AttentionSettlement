@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "deepseek-flash",
+ "corpus_hash": {
+  "doc": "db7a1702ad108df1",
+  "grid": "f3428865fd01e832"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG_sum",
+   "want": "102495",
+   "got": "17856",
+   "raw": "17856",
+   "ts": "2026-10-21T20:20:30",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 2,
+    "total_tokens": 461,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 203
+   },
+   "elapsed": 0.8,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

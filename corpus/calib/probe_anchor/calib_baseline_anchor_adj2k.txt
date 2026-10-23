@@ -1,0 +1,13 @@
+---
+kind: Record
+metadata:
+  name: NX-6042
+spec:
+  entries_total: 6287
+
+---
+kind: Record
+metadata:
+  name: NX-6179
+spec:
+  entries_total: 2970

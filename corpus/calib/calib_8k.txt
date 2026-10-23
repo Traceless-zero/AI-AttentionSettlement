@@ -1,0 +1,368 @@
+===== Document: DeepSeek-V2 (arXiv:2405.04434) =====
+Submit without GitHub Submit in GitHub
+Why HTML? Report Issue Back to Abstract Download PDF
+Abstract
+1 Introduction
+2 Architecture
+2.1 Multi-Head Latent Attention: Boosting Inference Efficiency
+2.1.1 Preliminaries: Standard Multi-Head Attention
+2.1.2 Low-Rank Key-Value Joint Compression
+2.1.3 Decoupled Rotary Position Embedding
+2.1.4 Comparison of Key-Value Cache
+2.2 DeepSeekMoE: Training Strong Models at Economical Costs
+2.2.1 Basic Architecture
+2.2.2 Device-Limited Routing
+2.2.3 Auxiliary Loss for Load Balance
+Expert-Level Balance Loss.
+Device-Level Balance Loss.
+Communication Balance Loss.
+2.2.4 Token-Dropping Strategy
+3 Pre-Training
+3.1 Experimental Setups
+3.1.1 Data Construction
+3.1.2 Hyper-Parameters
+Model Hyper-Parameters.
+Training Hyper-Parameters.
+3.1.3 Infrastructures
+3.1.4 Long Context Extension
+3.2 Evaluations
+3.2.1 Evaluation Benchmarks
+3.2.2 Evaluation Results
+3.2.3 Training and Inference Efficiency
+Training Costs.
+Inference Efficiency.
+4 Alignment
+4.1 Supervised Fine-Tuning
+4.2 Reinforcement Learning
+Reinforcement Learning Algorithm.
+Training Strategy.
+Optimizations for Training Efficiency.
+4.3 Evaluation Results
+4.4 Discussion
+Amount of SFT Data.
+Alignment Tax of Reinforcement Learning.
+Online Reinforcement Learning.
+5 Conclusion, Limitation, and Future Work
+References
+A Contributions and Acknowledgments
+B Full Formulas of MLA
+C Ablation of Attention Mechanisms
+C.1 Ablation of MHA, GQA, and MQA
+C.2 Comparison Between MLA and MHA
+D Discussion About Pre-Training Data Debiasing
+E Additional Evaluations on Math and Code
+F Evaluation Formats
+License: arXiv.org perpetual non-exclusive license
+arXiv:2405.04434v1 [cs.CL] 07 May 2024
+\reportnumber
+001
+DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model
+DeepSeek-AI research@deepseek.com
+Abstract
+We present DeepSeek-V2, a strong Mixture-of-Experts (MoE) language model characterized by economical training and efficient inference. It comprises 236B total parameters, of which 21B are activated for each token, and supports a context length of 128K tokens. DeepSeek-V2 adopts innovative architectures including Multi-head Latent Attention (MLA) and DeepSeekMoE. MLA guarantees efficient inference through significantly compressing the Key-Value (KV) cache into a latent vector, while DeepSeekMoE enables training strong models at an economical cost through sparse computation. Compared with DeepSeek 67B, DeepSeek-V2 achieves significantly stronger performance, and meanwhile saves 42.5% of training costs, reduces the KV cache by 93.3%, and boosts the maximum generation throughput to 5.76 times. We pretrain DeepSeek-V2 on a high-quality and multi-source corpus consisting of 8.1T tokens, and further perform Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) to fully unlock its potential. Evaluation results show that, even with only 21B activated parameters, DeepSeek-V2 and its chat versions still achieve top-tier performance among open-source models. The model checkpoints are available at https://github.com/deepseek-ai/DeepSeek-V2 .
+Figure 1: (a) MMLU accuracy vs. activated parameters, among different open-source models. (b) Training costs and inference efficiency of DeepSeek 67B (Dense) and DeepSeek-V2.
+Contents
+1 Introduction
+2 Architecture
+2.1 Multi-Head Latent Attention: Boosting Inference Efficiency
+2.1.1 Preliminaries: Standard Multi-Head Attention
+2.1.2 Low-Rank Key-Value Joint Compression
+2.1.3 Decoupled Rotary Position Embedding
+2.1.4 Comparison of Key-Value Cache
+2.2 DeepSeekMoE: Training Strong Models at Economical Costs
+2.2.1 Basic Architecture
+2.2.2 Device-Limited Routing
+2.2.3 Auxiliary Loss for Load Balance
+2.2.4 Token-Dropping Strategy
+3 Pre-Training
+3.1 Experimental Setups
+3.1.1 Data Construction
+3.1.2 Hyper-Parameters
+3.1.3 Infrastructures
+3.1.4 Long Context Extension
+3.2 Evaluations
+3.2.1 Evaluation Benchmarks
+3.2.2 Evaluation Results
+3.2.3 Training and Inference Efficiency
+4 Alignment
+4.1 Supervised Fine-Tuning
+4.2 Reinforcement Learning
+4.3 Evaluation Results
+4.4 Discussion
+5 Conclusion, Limitation, and Future Work
+References
+A Contributions and Acknowledgments
+B Full Formulas of MLA
+C Ablation of Attention Mechanisms
+C.1 Ablation of MHA, GQA, and MQA
+C.2 Comparison Between MLA and MHA
+D Discussion About Pre-Training Data Debiasing
+E Additional Evaluations on Math and Code
+F Evaluation Formats
+1 Introduction
+In the past few years, Large Language Models (LLMs) ( OpenAI, 2022 ; OpenAI, 2023 ; Anthropic, 2023 ; Google, 2023 ) have undergone rapid development, offering a glimpse into the dawn of Artificial General Intelligence (AGI). In general, the intelligence of an LLM tends to improve as the number of parameters increases, allowing it to exhibit emergent capabilities across various tasks ( Wei et al., 2022 ) . However, the improvement comes at the cost of larger computing resources for training and a potential decrease in inference throughput. These constraints present significant challenges that impede the widespread adoption and utilization of LLMs. In order to tackle this problem, we introduce DeepSeek-V2, a strong open-source Mixture-of-Experts (MoE) language model, characterized by economical training and efficient inference through an innovative Transformer architecture. It is equipped with a total of 236B parameters, of which 21B are activated for each token, and supports a context length of 128K tokens.
+We optimize the attention modules and Feed-Forward Networks (FFNs) within the Transformer framework ( Vaswani et al., 2017 ) with our proposed Multi-head Latent Attention (MLA) and DeepSeekMoE . (1) In the context of attention mechanisms, the Key-Value (KV) cache of the Multi-Head Attention (MHA) ( Vaswani et al., 2017 ) poses a significant obstacle to the inference efficiency of LLMs. Various approaches have been explored to address this issue, including Grouped-Query Attention (GQA) ( Ainslie et al., 2023 ) and Multi-Query Attention (MQA) ( Shazeer, 2019 ) . However, these methods often compromise performance in their attempt to reduce the KV cache. In order to achieve the best of both worlds, we introduce MLA, an attention mechanism equipped with low-rank key-value joint compression. Empirically, MLA achieves superior performance compared with MHA, and meanwhile significantly reduces the KV cache during inference, thus boosting the inference efficiency. (2) For Feed-Forward Networks (FFNs), we follow the DeepSeekMoE architecture ( Dai et al., 2024 ) , which adopts fine-grained expert segmentation and shared expert isolation for higher potential in expert specialization. The DeepSeekMoE architecture demonstrates great advantages compared with conventional MoE architectures like GShard ( Lepikhin et al., 2021 ) , enabling us to train strong models at an economical cost. As we employ expert parallelism during training, we also devise supplementary mechanisms to control communication overheads and ensure load balance. By combining these two techniques, DeepSeek-V2 features strong performance (Figure 1 ), economical training costs, and efficient inference throughput (Figure 1 ), simultaneously.
+We construct a high-quality and multi-source pre-training corpus consisting of 8.1T tokens. Compared with the corpus used in DeepSeek 67B (our previous release) ( DeepSeek-AI, 2024 ) , this corpus features an extended amount of data, especially Chinese data, and higher data quality. We first pretrain DeepSeek-V2 on the full pre-training corpus. Then, we collect 1.5M conversational sessions, which encompass various domains such as math, code, writing, reasoning, safety, and more, to perform Supervised Fine-Tuning (SFT) for DeepSeek-V2 Chat (SFT). Finally, we follow DeepSeekMath ( Shao et al., 2024 ) to employ Group Relative Policy Optimization (GRPO) to further align the model with human preference and produce DeepSeek-V2 Chat (RL).
+We evaluate DeepSeek-V2 on a wide range of benchmarks in English and Chinese, and compare it with representative open-source models. Evaluation results show that even with only 21B activated parameters, DeepSeek-V2 still achieves top-tier performance among open-source models and becomes the strongest open-source MoE language model. Figure 1 highlights that, on MMLU, DeepSeek-V2 achieves top-ranking performance with only a small number of activated parameters. In addition, as shown in Figure 1 , compared with DeepSeek 67B, DeepSeek-V2 saves 42.5% of training costs, reduces the KV cache by 93.3%, and boosts the maximum generation throughput to 5.76 times. We also evaluate DeepSeek-V2 Chat (SFT) and DeepSeek-V2 Chat (RL) on open-ended benchmarks. Notably, DeepSeek-V2 Chat (RL) achieves 38.9 length-controlled win rate on AlpacaEval 2.0 ( Dubois et al., 2024 ) , 8.97 overall score on MT-Bench ( Zheng et al., 2023 ) , and 7.91 overall score on AlignBench ( Liu et al., 2023 ) . The English open-ended conversation evaluations demonstrate that DeepSeek-V2 Chat (RL) has top-tier performance among open-source chat models. In addition, the evaluation on AlignBench indicates that in Chinese, DeepSeek-V2 Chat (RL) outperforms all of open-source models, and even beats most of closed-source models.
+In the rest of this paper, we first provide a detailed description of the model architecture of DeepSeek-V2 (Section 2 ). Subsequently, we introduce our pre-training endeavors, including the training data construction, hyper-parameter settings, infrastructures, long context extension, and the evaluation of model performance and efficiency (Section 3 ). Following this, we demonstrate our efforts in alignment, encompassing Supervised Fine-Tuning (SFT), Reinforcement Learning (RL), the evaluation results, and other discussion (Section 4 ). Finally, we summarize the conclusion, deliberate on the current limitations of DeepSeek-V2, and outline our future work (Section 5 ).
+Figure 2: Illustration of the architecture of DeepSeek-V2. MLA ensures efficient inference by significantly reducing the KV cache for generation, and DeepSeekMoE enables training strong models at an economical cost through the sparse architecture.
+2 Architecture
+By and large, DeepSeek-V2 is still in the Transformer architecture ( Vaswani et al., 2017 ) , where each Transformer block consists of an attention module and a Feed-Forward Network (FFN). However, for both the attention module and the FFN, we design and employ innovative architectures. For attention, we design MLA, which utilizes low-rank key-value joint compression to eliminate the bottleneck of inference-time key-value cache, thus supporting efficient inference. For FFNs, we adopt the DeepSeekMoE architecture ( Dai et al., 2024 ) , a high-performance MoE architecture that enables training strong models at an economical cost. An illustration of the architecture of DeepSeek-V2 is presented in Figure 2 , and we will introduce the details of MLA and DeepSeekMoE in this section. For other tiny details (e.g., layer normalization and the activation function in FFNs), unless specifically stated, DeepSeek-V2 follows the settings of DeepSeek 67B ( DeepSeek-AI, 2024 ) .
+2.1 Multi-Head Latent Attention: Boosting Inference Efficiency
+Conventional Transformer models usually adopts Multi-Head Attention (MHA) ( Vaswani et al., 2017 ) , but during generation, its heavy Key-Value (KV) cache will become the bottleneck that limit the inference efficiency. In order to reduce the KV cache, Multi-Query Attention (MQA) ( Shazeer, 2019 ) and Grouped-Query Attention (GQA) ( Ainslie et al., 2023 ) are proposed. They require a smaller magnitude of KV cache, but their performance does not match MHA (we provide the ablation of MHA, GQA and MQA in Appendix C.1 ).
+For DeepSeek-V2, we design an innovative attention mechanism called Multi-head Latent Attention (MLA). Equipped with low-rank key-value joint compression, MLA achieves better performance than MHA, but requires a significantly smaller amount of KV cache. We introduce its architecture in the following, and also provide a comparison between MLA and MHA in Appendix C.2 .
+2.1.1 Preliminaries: Standard Multi-Head Attention
+We first introduce the standard MHA mechanism as background. Let be the embedding dimension, be the number of attention heads, be the dimension per head, and be the attention input of the -th token at an attention layer. Standard MHA first produces through three matrices , respectively:
+(1)
+(2)
+(3)
+Then, will be sliced into heads for the multi-head attention computation:
+(4)
+(5)
+(6)
+(7)
+(8)
+where denote the query, key, and value of the -th attention head, respectively; denotes the output projection matrix. During inference, all keys and values need to be cached to accelerate inference, so MHA needs to cache elements for each token. In model deployment, this heavy KV cache is a large bottleneck that limits the maximum batch size and sequence length.
+Figure 3: Simplified illustration of Multi-Head Attention (MHA), Grouped-Query Attention (GQA), Multi-Query Attention (MQA), and Multi-head Latent Attention (MLA). Through jointly compressing the keys and values into a latent vector, MLA significantly reduces the KV cache during inference.
+2.1.2 Low-Rank Key-Value Joint Compression
+The core of MLA is the low-rank joint compression for keys and values to reduce KV cache:
+(9)
+(10)
+(11)
+where is the compressed latent vector for keys and values; denotes the KV compression dimension; is the down-projection matrix; and are the up-projection matrices for keys and values, respectively. During inference, MLA only needs to cache , so its KV cache has only elements, where denotes the number of layers. In addition, during inference, since can be absorbed into , and can be absorbed into , we even do not need to compute keys and values out for attention. Figure 3 intuitively illustrates how the KV joint compression in MLA reduces the KV cache.
+Moreover, in order to reduce the activation memory during training, we also perform low-rank compression for the queries, even if it cannot reduce the KV cache:
+(12)
+(13)
+where is the compressed latent vector for queries; denotes the query compression dimension; and are the down-projection and up-projection matrices for queries, respectively.
+2.1.3 Decoupled Rotary Position Embedding
+Following DeepSeek 67B ( DeepSeek-AI, 2024 ) , we intend to use the Rotary Position Embedding (RoPE) ( Su et al., 2024 ) for DeepSeek-V2. However, RoPE is incompatible with low-rank KV compression. To be specific, RoPE is position-sensitive for both keys and queries. If we apply RoPE for the keys , in Equation 10 will be coupled with a position-sensitive RoPE matrix. In this way, cannot be absorbed into any more during inference, since a RoPE matrix related to the currently generating token will lie between and and matrix multiplication does not obey a commutative law. As a result, we must recompute the keys for all the prefix tokens during inference, which will significantly hinder the inference efficiency.
+As a solution, we propose the decoupled RoPE strategy that uses additional multi-head queries and a shared key to carry RoPE, where denotes the per-head dimension of the decoupled queries and key. Equipped with the decoupled RoPE strategy, MLA performs the following computation:
+(14)
+(15)
+(16)
+(17)
+(18)
+(19)
+where and are matrices to produce the decouples queries and key, respectively; denotes the operation that applies RoPE matrices; and denotes the concatenation operation. During inference, the decoupled key should also be cached. Therefore, DeepSeek-V2 requires a total KV cache containing elements.
+In order to demonstrate the complete computation process of MLA, we also organize and provide its full formulas in Appendix B .
+Attention Mechanism
+KV Cache per Token (# Element)
+Capability
+Multi-Head Attention (MHA)
+Strong
+Grouped-Query Attention (GQA)
+Moderate
+Multi-Query Attention (MQA)
+Weak
+MLA (Ours)
+Stronger
+Table 1: Comparison of the KV cache per token among different attention mechanisms. denotes the number of attention heads, denotes the dimension per attention head, denotes the number of layers, denotes the number of groups in GQA, and and denote the KV compression dimension and the per-head dimension of the decoupled queries and key in MLA, respectively. The amount of KV cache is measured by the number of elements, regardless of the storage precision. For DeepSeek-V2, is set to and is set to . So, its KV cache is equal to GQA with only 2.25 groups, but its performance is stronger than MHA.
+2.1.4 Comparison of Key-Value Cache
+We demonstrate a comparison of the KV cache per token among different attention mechanisms in Table 1 . MLA requires only a small amount of KV cache, equal to GQA with only 2.25 groups, but can achieve stronger performance than MHA.
+2.2 DeepSeekMoE: Training Strong Models at Economical Costs
+2.2.1 Basic Architecture
+For FFNs, we employ the DeepSeekMoE architecture ( Dai et al., 2024 ) . DeepSeekMoE has two key ideas: segmenting experts into finer granularity for higher expert specialization and more accurate knowledge acquisition, and isolating some shared experts for mitigating knowledge redundancy among routed experts. With the same number of activated and total expert parameters, DeepSeekMoE can outperform conventional MoE architectures like GShard ( Lepikhin et al., 2021 ) by a large margin.
+Let be the FFN input of the -th token, we compute the FFN output as follows:
+(20)
+(21)
+(22)
+where and denote the numbers of shared experts and routed experts, respectively; and denote the -th shared expert and the -th routed expert, respectively; denotes the number of activated routed experts; is the gate value for the -th expert; is the token-to-expert affinity; is the centroid of the -th routed expert in this layer; and denotes the set comprising highest scores among the affinity scores calculated for the -th token and all routed experts.
+2.2.2 Device-Limited Routing
+We design a device-limited routing mechanism to bound MoE-related communication costs. When expert parallelism is employed, the routed experts will be distributed across multiple devices. For each token, its MoE-related communication frequency is proportional to the number of devices covered by its target experts. Due to the fine-grained expert segmentation in DeepSeekMoE, the number of activated experts can be large, so the MoE-related communication will be more costly if we apply expert parallelism.
+For DeepSeek-V2, beyond the naive top-K selection of routed experts, we additionally ensure that the target experts of each token will be distributed on at most devices. To be specific, for each token, we first select devices that have experts with the highest affinity scores in them. Then, we perform top-K selection among experts on these devices. In practice, we find that when , the device-limited routing can achieve a good performance roughly aligned with the unrestricted top-K routing.
+2.2.3 Auxiliary Loss for Load Balance
+We take the load balance into consideration for automatically learned routing strategies. Firstly, unbalanced load will raise the risk of routing collapse ( Shazeer et al., 2017 ) , preventing some experts being fully trained and utilized. Secondly, when expert parallelism is employed, unbalanced load will diminish computation efficiency. During the training of DeepSeek-V2, we design three kinds of auxiliary losses, for controlling expert-level load balance ( ), device-level load balance ( ), and communication balance ( ), respectively.
+Expert-Level Balance Loss.
+We use an expert-level balance loss ( Fedus et al., 2021 ; Lepikhin et al., 2021 ) to mitigate the risk of routing collapse:
+(23)
+(24)
+(25)
+where is a hyper-parameter called expert-level balance factor; denotes the indicator function; and denotes the number of tokens in a sequence.
+Device-Level Balance Loss.
+In addition to the expert-level balance loss, we additionally design a device-level balance loss to ensure balanced computation across different devices. In the training process of DeepSeek-V2, we partition all routed experts into groups , and deploy each group on a single device. The device-level balance loss is computed as follows:
+(26)
+(27)
+(28)
+where is a hyper-parameter called device-level balance factor.
+Communication Balance Loss.
+Finally, we introduce a communication balance loss to ensure that the communication of each device is balanced. Although the device-limited routing mechanism guarantees that the sending communication of each device is bounded, if a certain device receives more tokens than other devices, the practical communication efficiency will also be affected. In order to mitigate this issue, we design a communication balance loss as follows:
+(29)
+(30)
+(31)
+where is a hyper-parameter called communication balance factor. The device-limited routing mechanism operates on the principle of ensuring that each device transmits at most hidden states to other devices. Simultaneously, the communication balance loss is employed to encourage each device to receive around hidden states from other devices. The communication balance loss guarantees a balanced exchange of information among devices, promoting efficient communications.
+2.2.4 Token-Dropping Strategy
+While balance losses aim to encourage a balanced load, it is important to acknowledge that they cannot guarantee a strict load balance. In order to further mitigate the computation wastage caused by unbalanced load, we introduce a device-level token-dropping strategy during training. This approach first computes the average computational budget for each device, which means that the capacity factor for each device is equivalent to 1.0. Then, inspired by Riquelme et al. (2021) , we drop tokens with the lowest affinity scores on each device until reaching the computational budget. In addition, we ensure that the tokens belonging to approximately 10% of the training sequences will never be dropped. In this way, we can flexibly decide whether to drop tokens during inference according to the efficiency requirements, and always ensure consistency between training and inference.
+3 Pre-Training
+3.1 Experimental Setups
+3.1.1 Data Construction
+While maintaining the same data processing stages as for DeepSeek 67B ( DeepSeek-AI, 2024 ) , we extend the amount of data and elevate the data quality. In order to enlarge our pre-training corpus, we delve deeper into the potential of the internet data and optimize our cleaning processes, thus recovering a large amount of mistakenly deleted data. Moreover, we incorporate more Chinese data, aiming to better leverage the corpus available on the Chinese internet. In addition to the amount of data, we also focus on the data quality. We enrich our pre-training corpus with high-quality data from various sources, and meanwhile improve the quality-based filtering algorithm. The improved algorithm ensures that a large amount of non-beneficial data will be removed, while the valuable data will be mostly retained. In addition, we filter out the contentious content from our pre-training corpus to mitigate the data bias introduced from specific regional cultures. A detailed discussion about the influence of this filtering strategy is presented in Appendix D .
+We adopt the same tokenizer as used in DeepSeek 67B, which is built based on the Byte-level Byte-Pair Encoding (BBPE) algorithm and has a vocabulary size of 100K. Our tokenized pre-training corpus contains 8.1T tokens, where Chinese tokens are approximately 12% more than English ones.
+3.1.2 Hyper-Parameters
+Model Hyper-Parameters.
+We set the number of Transformer layers to 60 and the hidden dimension to 5120. All learnable parameters are randomly initialized with a standard deviation of 0.006. In MLA, we set the number of attention heads to 128 and the per-head dimension to 128. The KV compression dimension is set to 512, and the query compression dimension is set to 1536. For the decoupled queries and key, we set the per-head dimension to 64. Following Dai et al. (2024) , we substitute all FFNs except for the first layer with MoE layers. Each MoE layer consists of 2 shared experts and 160 routed experts, where the intermediate hidden dimension of each expert is 1536. Among the routed experts, 6 experts will be activated for each token. In addition, the low-rank compression and fine-grained expert segmentation will impact the output scale of a layer. Therefore, in practice, we employ additional RMS Norm layers after the compressed latent vectors, and multiply additional scaling factors at the width bottlenecks (i.e., the compressed latent vectors and the intermediate hidden states of routed experts) to ensure stable training. Under this configuration, DeepSeek-V2 comprises 236B total parameters, of which 21B are activated for each token.
+Training Hyper-Parameters.
+We employ the AdamW optimizer ( Loshchilov and Hutter, 2017 ) with hyper-parameters set to , , and . The learning rate is scheduled using a warmup-and-step-decay strategy ( DeepSeek-AI, 2024 ) . Initially, the learning rate linearly increases from 0 to the maximum value during the first 2K steps. Subsequently, the learning rate is multiplied by 0.316 after training about 60% of tokens, and again by 0.316 after training about 90% of tokens. The maximum learning rate is set to , and the gradient clipping norm is set to 1.0. We also use a batch size scheduling strategy, where the batch size is gradually increased from 2304 to 9216 in the training of the first 225B tokens, and then keeps 9216 in the remaining training. We set the maximum sequence length to 4K, and train DeepSeek-V2 on 8.1T tokens. We leverage pipeline parallelism to deploy different layers of a model on different devices, and for each layer, the routed experts will be uniformly deployed on 8 devices ( ). As for the device-limited routing, each token will be sent to at most 3 devices ( ). As for balance losses, we set to 0.003, to 0.05, and to 0.02. We employ the token-dropping strategy during training for acceleration, but do not drop any tokens for evaluation.
+3.1.3 Infrastructures
+DeepSeek-V2 is trained based on the HAI-LLM framework ( High-flyer, 2023 ) , an efficient and light-weight training framework developed internally by our engineers. It employs a 16-way zero-bubble pipeline parallelism ( Qi et al., 2023 ) , an 8-way expert parallelism ( Lepikhin et al., 2021 ) , and ZeRO-1 data parallelism ( Rajbhandari et al., 2020 ) . Given that DeepSeek-V2 has relatively few activated parameters, and a portion of the operators are recomputed to save activation memory, it can be trained without the necessity of tensor parallelism, thereby decreasing the communication overhead. Moreover, in order to further improve the training efficiency, we overlap the computation of shared experts with the expert parallel all-to-all communication. We also customize faster CUDA kernels for communications, routing algorithms, and fused linear computations across different experts. In addition, MLA is also optimized based on an improved version of FlashAttention-2 ( Dao, 2023 ) .
+We conduct all experiments on a cluster equipped with NVIDIA H800 GPUs. Each node in the H800 cluster contains 8 GPUs connected using NVLink and NVSwitch within nodes. Across nodes, InfiniBand interconnects are utilized to facilitate communications.
+Figure 4: Evaluation results on the “Needle In A Haystack” (NIAH) tests. DeepSeek-V2 performs well across all context window lengths up to 128K.
+3.1.4 Long Context Extension
+After the initial pre-training of DeepSeek-V2, we employ YaRN ( Peng et al., 2023 ) to extend the default context window length from 4K to 128K. YaRN was specifically applied to the decoupled shared key as it is responsible for carrying RoPE ( Su et al., 2024 ) . For YaRN, we set the scale to 40, to 1, to 32, and the target maximum context length to 160K. Under these settings, we can expect the model to respond well for a context length of 128K. Slightly diverging from original YaRN, due to our distinct attention mechanism, we adjust the length scaling factor to modulate the attention entropy. The factor is computed as , aiming at minimizing the perplexity.
+We additionally train the model for 1000 steps, with a sequence length of 32K and a batch size of 576 sequences. Although the training is conducted solely at the sequence length of 32K, the model still demonstrates robust performance when being evaluated at a context length of 128K. As shown in Figure 4 , the results on the “Needle In A Haystack” (NIAH) tests indicate that DeepSeek-V2 performs well across all context window lengths up to 128K.
+3.2 Evaluations
+3.2.1 Evaluation Benchmarks
+DeepSeek-V2 is pretrained on a bilingual corpus, so we evaluate it on a series of benchmarks in English and Chinese. Our evaluation is based on our internal evaluation framework integrated in our HAI-LLM framework. Included benchmarks are categorized and listed as follows, where underlined benchmarks are in Chinese:
+Multi-subject multiple-choice datasets include MMLU ( Hendrycks et al., 2020 ) , C-Eval ( Huang et al., 2023 ) , and CMMLU ( Li et al., 2023 ) .
+Language understanding and reasoning datasets include HellaSwag ( Zellers et al., 2019 ) , PIQA ( Bisk et al., 2020 ) , ARC ( Clark et al., 2018 ) , and BigBench Hard (BBH) ( Suzgun et al., 2022 ) .
+Closed-book question answering datasets include TriviaQA ( Joshi et al., 2017 ) and NaturalQuestions ( Kwiatkowski et al., 2019 ) .
+Reading comprehension datasets include RACE Lai et al. (2017) , DROP ( Dua et al., 2019 ) , C3 ( Sun et al., 2019 ) , and CMRC ( Cui et al., 2019 ) .
+Reference disambiguation datasets include WinoGrande Sakaguchi et al. (2019) and CLUEWSC ( Xu et al., 2020 ) .
+Language modeling datasets include Pile ( Gao et al., 2020 ) .
+Chinese understanding and culture datasets include CHID ( Zheng et al., 2019 ) and CCPM ( Li et al., 2021 ) .
+Math datasets include GSM8K ( Cobbe et al., 2021 ) , MATH ( Hendrycks et al., 2021 ) , and CMath ( Wei et al., 2023 ) .
+Code datasets include HumanEval ( Chen et al., 2021 ) , MBPP ( Austin et al., 2021 ) , and CRUXEval ( Gu et al., 2024 ) .
+Standardized exams include AGIEval ( Zhong et al., 2023 ) . Note that AGIEval includes both English and Chinese subsets.
+Following our previous work ( DeepSeek-AI, 2024 ) , we adopt perplexity-based evaluation for datasets including HellaSwag, PIQA, WinoGrande, RACE-Middle, RACE-High, MMLU, ARC-Easy, ARC-Challenge, CHID, C-Eval, CMMLU, C3, and CCPM, and adopt generation-based evaluation for TriviaQA, NaturalQuestions, DROP, MATH, GSM8K, HumanEval, MBPP, CRUXEval, BBH, AGIEval, CLUEWSC, CMRC, and CMath. In addition, we perform language-modeling-based evaluation for Pile-test and use Bits-Per-Byte (BPB) as the metric to guarantee fair comparison among models with different tokenizers.
+For an intuitive overview of these benchmarks, we additionally provide our evaluation formats for each benchmark in Appendix F .
+3.2.2 Evaluation Results
+Benchmark (Metric)
+# Shots
+DeepSeek
+Qwen1.5
+Mixtral
+LLaMA 3
+DeepSeek-V2
+67B
+72B
+8x22B
+70B
+Architecture
+-
+Dense
+Dense
+MoE
+Dense
+MoE
+# Activated Params
+-
+67B
+72B
+39B
+70B
+21B
+# Total Params
+-
+67B
+72B
+141B
+70B
+236B
+English
+Pile-test (BPB)
+-
+0.642
+0.637
+0.623
+0.602
+0.606
+BBH (EM)
+3-shot
+68.7
+59.9
+78.9
+81.0
+78.9
+MMLU (Acc.)
+5-shot
+71.3
+77.2
+77.6
+78.9
+78.5
+DROP (F1)
+3-shot
+69.7
+71.5
+80.4
+82.5
+80.1
+ARC-Easy (Acc.)
+25-shot
+95.3
+97.1
+97.3
+97.9
+97.6
+ARC-Challenge (Acc.)
+25-shot
+86.4
+92.8
+91.2
+93.3
+92.4
+HellaSwag (Acc.)
+10-shot
+86.3
+85.8
+86.6
+87.9
+84.2
+PIQA (Acc.)
+0-shot
+83.6
+83.3
+83.6
+85.0
+83.7
+WinoGrande (Acc.)
+5-shot
+84.9
+82.4
+83.7
+85.7
+84.9
+RACE-Middle (Acc.)
+5-shot
+69.9
+63.4
+73.3
+73.3
+73.1
+RACE-High (Acc.)
+5-shot
+50.7
+47.0
+56.7
+57.9
+52.7
+TriviaQA (EM)
+5-shot
+78.9
+73.1
+82.1
+81.6
+79.9
+NaturalQuestions (EM)
+5-shot
+36.6
+35.6
+39.6
+40.2
+38.7
+AGIEval (Acc.)
+0-shot
+41.3
+64.4
+43.4
+49.8
+51.2
+Code
+HumanEval (Pass@1)
+0-shot
+45.1
+43.9
+53.1
+48.2
+48.8
+MBPP (Pass@1)
+3-shot

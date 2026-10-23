@@ -1,0 +1,144 @@
+{
+ "date": "2026-10-18",
+ "stage": "anchor_arm_adj2k",
+ "model": "glm-4.7-flash",
+ "thinking": "disabled",
+ "details": [
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6042",
+   "depth": 0.800221770467566,
+   "question": "What is the total number of entries recorded for minor archive NX-6042?",
+   "answer": "6287",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "6287",
+   "hit": true,
+   "elapsed": 32.3
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6179",
+   "depth": 0.8007761966364813,
+   "question": "What is the total number of entries recorded for minor archive NX-6179?",
+   "answer": "2970",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "2970",
+   "hit": true,
+   "elapsed": 36.3
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6316",
+   "depth": 0.8017002402513399,
+   "question": "What is the total number of entries recorded for minor archive NX-6316?",
+   "answer": "4472",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": true,
+   "elapsed": 38.4
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6453",
+   "depth": 0.8031787100351137,
+   "question": "What is the total number of entries recorded for minor archive NX-6453?",
+   "answer": "8701",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "8701",
+   "hit": true,
+   "elapsed": 15.3
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6590",
+   "depth": 0.8035483274810571,
+   "question": "What is the total number of entries recorded for minor archive NX-6590?",
+   "answer": "5794",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": false,
+   "elapsed": 31.3
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6727",
+   "depth": 0.8041027536499723,
+   "question": "What is the total number of entries recorded for minor archive NX-6727?",
+   "answer": "5371",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": false,
+   "elapsed": 46.3
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6864",
+   "depth": 0.805026797264831,
+   "question": "What is the total number of entries recorded for minor archive NX-6864?",
+   "answer": "1453",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": false,
+   "elapsed": 41.2
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6101",
+   "depth": 0.8065052670486047,
+   "question": "What is the total number of entries recorded for minor archive NX-6101?",
+   "answer": "6713",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": false,
+   "elapsed": 23.0
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6238",
+   "depth": 0.8068748844945481,
+   "question": "What is the total number of entries recorded for minor archive NX-6238?",
+   "answer": "3257",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": false,
+   "elapsed": 137.9
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6375",
+   "depth": 0.8074293106634634,
+   "question": "What is the total number of entries recorded for minor archive NX-6375?",
+   "answer": "1090",
+   "answer_occurrences": 1,
+   "chars": 512428,
+   "model_reply": "4472",
+   "hit": false,
+   "elapsed": 26.9
+  }
+ ],
+ "baselines": [
+  {
+   "pair": "NX-6042",
+   "want": "6287",
+   "model_reply": "6287",
+   "hit": true,
+   "elapsed": 21.7
+  },
+  {
+   "pair": "NX-6179",
+   "want": "2970",
+   "model_reply": "2970",
+   "hit": true,
+   "elapsed": 0.8
+  }
+ ]
+}

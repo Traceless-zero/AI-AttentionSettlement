@@ -1,0 +1,152 @@
+{
+ "date": "2026-10-21",
+ "geometry_mode": "scattered",
+ "n_clusters": 18,
+ "value_ranges": {
+  "archive": [
+   1000,
+   1999
+  ],
+  "service": [
+   2000,
+   2999
+  ],
+  "dataset": [
+   3000,
+   3999
+  ]
+ },
+ "vals_by_type": {
+  "archive": [
+   1559,
+   1987,
+   1394,
+   1594,
+   1872,
+   1994
+  ],
+  "service": [
+   2011,
+   2390,
+   2414,
+   2321,
+   2653,
+   2658
+  ],
+  "dataset": [
+   3238,
+   3493,
+   3408,
+   3415,
+   3000,
+   3930
+  ]
+ },
+ "grid": [
+  {
+   "pair": "NX-9901",
+   "type": "archive",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9901?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9902",
+   "type": "archive",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9902?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9903",
+   "type": "archive",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9903?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9904",
+   "type": "archive",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9904?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "NX-9905",
+   "type": "archive",
+   "match": "refusal",
+   "question": "What is the entry count reported for archive NX-9905?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "SX-9901",
+   "type": "service",
+   "match": "refusal",
+   "question": "How many replicas does service SX-9901 run?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "SX-9902",
+   "type": "service",
+   "match": "refusal",
+   "question": "How many replicas does service SX-9902 run?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "SX-9903",
+   "type": "service",
+   "match": "refusal",
+   "question": "How many replicas does service SX-9903 run?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "SX-9904",
+   "type": "service",
+   "match": "refusal",
+   "question": "How many replicas does service SX-9904 run?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "SX-9905",
+   "type": "service",
+   "match": "refusal",
+   "question": "How many replicas does service SX-9905 run?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "DX-9901",
+   "type": "dataset",
+   "match": "refusal",
+   "question": "How many shards does dataset DX-9901 contain?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "DX-9902",
+   "type": "dataset",
+   "match": "refusal",
+   "question": "How many shards does dataset DX-9902 contain?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "DX-9903",
+   "type": "dataset",
+   "match": "refusal",
+   "question": "How many shards does dataset DX-9903 contain?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "DX-9904",
+   "type": "dataset",
+   "match": "refusal",
+   "question": "How many shards does dataset DX-9904 contain?",
+   "answer": "UNKNOWN"
+  },
+  {
+   "pair": "DX-9905",
+   "type": "dataset",
+   "match": "refusal",
+   "question": "How many shards does dataset DX-9905 contain?",
+   "answer": "UNKNOWN"
+  }
+ ]
+}

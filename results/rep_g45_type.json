@@ -1,0 +1,297 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "58b9b6ccc9a79a46",
+  "grid": "167395e2b1647a44"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "NX-9901",
+   "want": "UNKNOWN",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:29:40",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129837,
+    "prompt_tokens_details": {
+     "cached_tokens": 7522
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 31.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9902",
+   "want": "UNKNOWN",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:29:50",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129837,
+    "prompt_tokens_details": {
+     "cached_tokens": 129828
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9903",
+   "want": "UNKNOWN",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:30:00",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129837,
+    "prompt_tokens_details": {
+     "cached_tokens": 129828
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9904",
+   "want": "UNKNOWN",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:30:09",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129837,
+    "prompt_tokens_details": {
+     "cached_tokens": 129828
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-9905",
+   "want": "UNKNOWN",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:30:19",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129837,
+    "prompt_tokens_details": {
+     "cached_tokens": 129828
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "SX-9901",
+   "want": "UNKNOWN",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:30:29",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129816
+    },
+    "total_tokens": 129837
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "SX-9902",
+   "want": "UNKNOWN",
+   "got": "2390",
+   "raw": "2390",
+   "ts": "2026-10-21T16:30:39",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "SX-9903",
+   "want": "UNKNOWN",
+   "got": "2390",
+   "raw": "2390",
+   "ts": "2026-10-21T16:30:48",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "SX-9904",
+   "want": "UNKNOWN",
+   "got": "2390",
+   "raw": "2390",
+   "ts": "2026-10-21T16:30:58",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "SX-9905",
+   "want": "UNKNOWN",
+   "got": "2390",
+   "raw": "2390",
+   "ts": "2026-10-21T16:31:08",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "DX-9901",
+   "want": "UNKNOWN",
+   "got": "2414",
+   "raw": "2414",
+   "ts": "2026-10-21T16:31:17",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129818
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "DX-9902",
+   "want": "UNKNOWN",
+   "got": "3000",
+   "raw": "3000",
+   "ts": "2026-10-21T16:31:27",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129838
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "DX-9903",
+   "want": "UNKNOWN",
+   "got": "3000",
+   "raw": "3000",
+   "ts": "2026-10-21T16:31:37",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129838
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "DX-9904",
+   "want": "UNKNOWN",
+   "got": "3415",
+   "raw": "3415",
+   "ts": "2026-10-21T16:31:47",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129839
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "DX-9905",
+   "want": "UNKNOWN",
+   "got": "3000",
+   "raw": "3000",
+   "ts": "2026-10-21T16:31:57",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 129835,
+    "prompt_tokens_details": {
+     "cached_tokens": 129825
+    },
+    "total_tokens": 129838
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "nvidia/nemotron-3.5-super-vl:free",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "73de4fcc014f5e40"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG_gt5000",
+   "want": "9",
+   "got": "4",
+   "raw": "4",
+   "ts": "2026-10-21T14:43:36",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 138980,
+    "completion_tokens": 2,
+    "total_tokens": 138982,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 138752,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0,
+     "upstream_inference_prompt_cost": 0,
+     "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "elapsed": 3.2,
+   "error": null,
+   "provider": "Nvidia"
+  },
+  {
+   "pair": "AGG_gt3000",
+   "want": "14",
+   "got": "10",
+   "raw": "10",
+   "ts": "2026-10-21T14:43:48",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 138980,
+    "completion_tokens": 3,
+    "total_tokens": 138983,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 138752,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0,
+     "upstream_inference_prompt_cost": 0,
+     "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "elapsed": 3.8,
+   "error": null,
+   "provider": "Nvidia"
+  },
+  {
+   "pair": "AGG_lt2000",
+   "want": "4",
+   "got": "1",
+   "raw": "1",
+   "ts": "2026-10-21T14:43:59",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 138980,
+    "completion_tokens": 2,
+    "total_tokens": 138982,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 138752,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0,
+     "upstream_inference_prompt_cost": 0,
+     "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "elapsed": 3.0,
+   "error": null,
+   "provider": "Nvidia"
+  },
+  {
+   "pair": "AGG_max",
+   "want": "9564",
+   "got": "9536",
+   "raw": "9536",
+   "ts": "2026-10-21T14:44:10",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 138978,
+    "completion_tokens": 5,
+    "total_tokens": 138983,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 138752,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0,
+     "upstream_inference_prompt_cost": 0,
+     "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "elapsed": 3.0,
+   "error": null,
+   "provider": "Nvidia"
+  },
+  {
+   "pair": "AGG_range",
+   "want": "8",
+   "got": "10",
+   "raw": "10",
+   "ts": "2026-10-21T14:44:22",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 138984,
+    "completion_tokens": 3,
+    "total_tokens": 138987,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+     "cached_tokens": 138752,
+     "cache_write_tokens": 0,
+     "audio_tokens": 0,
+     "video_tokens": 0
+    },
+    "cost_details": {
+     "upstream_inference_cost": 0,
+     "upstream_inference_prompt_cost": 0,
+     "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0,
+     "image_tokens": 0,
+     "audio_tokens": 0
+    }
+   },
+   "elapsed": 4.1,
+   "error": null,
+   "provider": "Nvidia"
+  }
+ ]
+}

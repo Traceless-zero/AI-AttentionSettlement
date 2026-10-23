@@ -1,0 +1,19 @@
+===== FILE: archives/EP-4318.yaml =====
+kind: Archive
+metadata:
+  name: EP-4318
+spec:
+  liaison_officer: OE-9271
+===== FILE: officers/OE-9271.yaml =====
+kind: Officer
+metadata:
+  name: OE-9271
+spec:
+  facility: FE-2846
+
+===== FILE: records/NX-1051.yaml =====
+kind: Record
+metadata:
+  name: NX-1051
+spec:
+  entries_total: 6028

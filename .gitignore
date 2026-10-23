@@ -1,0 +1,20 @@
+# secrets — never commit
+*api_key*.txt
+*.key
+.env
+API.txt
+
+# internal working notes (stay local)
+进仓清单.md
+
+# local junk
+__pycache__/
+*.pyc
+_backup*/
+_tmp*/
+logs/
+models/
+
+# OS
+Thumbs.db
+.DS_Store

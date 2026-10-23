@@ -1,0 +1,134 @@
+{
+ "date": "2026-10-18",
+ "stage": "anchor_arm",
+ "design": "复刻 calib_128k_b 的 25 根针（10 链跳1 + 10 链跳2 + 5 计数），仅把散文句换成 k8s 结构块；位置/编号/数值/题面不变",
+ "source_doc": "probe_B128/calib_128k_b.txt",
+ "baseline_pairs": [
+  "EP-4318",
+  "NX-1051"
+ ],
+ "grid": [
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "EP-4318",
+   "depth": 0.25,
+   "question": "At which facility is the liaison officer for archive EP-4318 stationed?",
+   "answer": "FE-2846",
+   "baseline": true,
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "GR-6502",
+   "depth": 0.5,
+   "question": "At which facility is the liaison officer for archive GR-6502 stationed?",
+   "answer": "FG-7604",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "HS-8257",
+   "depth": 0.75,
+   "question": "At which facility is the liaison officer for archive HS-8257 stationed?",
+   "answer": "FH-3416",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "LV-7403",
+   "depth": 0.6,
+   "question": "Which central depot does the facility linked to archive LV-7403 report to?",
+   "answer": "DL-2107",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "TB-4317",
+   "depth": 0.15,
+   "question": "At which facility is the liaison officer for archive TB-4317 stationed?",
+   "answer": "FT-1063",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "UC-6702",
+   "depth": 0.35,
+   "question": "At which facility is the liaison officer for archive UC-6702 stationed?",
+   "answer": "FU-7504",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "VD-1295",
+   "depth": 0.55,
+   "question": "At which facility is the liaison officer for archive VD-1295 stationed?",
+   "answer": "FV-3187",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "WE-8630",
+   "depth": 0.65,
+   "question": "At which facility is the liaison officer for archive WE-8630 stationed?",
+   "answer": "FW-2495",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "XF-3824",
+   "depth": 0.45,
+   "question": "Which central depot does the facility linked to archive XF-3824 report to?",
+   "answer": "DX-5216",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "YG-5491",
+   "depth": 0.8,
+   "question": "Which central depot does the facility linked to archive YG-5491 report to?",
+   "answer": "DY-3079",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-1051",
+   "depth": 0.800221770467566,
+   "question": "What is the total number of entries recorded for minor archive NX-1051?",
+   "answer": "6028",
+   "baseline": true,
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-2263",
+   "depth": 0.8007761966364813,
+   "question": "What is the total number of entries recorded for minor archive NX-2263?",
+   "answer": "4735",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-3377",
+   "depth": 0.8017002402513399,
+   "question": "What is the total number of entries recorded for minor archive NX-3377?",
+   "answer": "8914",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-4489",
+   "depth": 0.8031787100351137,
+   "question": "What is the total number of entries recorded for minor archive NX-4489?",
+   "answer": "1562",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor",
+   "pair": "NX-5593",
+   "depth": 0.8031787100351137,
+   "question": "What is the total number of entries recorded for minor archive NX-5593?",
+   "answer": "7308",
+   "answer_occurrences": 1
+  }
+ ]
+}

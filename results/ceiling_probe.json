@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-16",
+  "model": "glm-4.7-flash",
+  "thinking": "disabled",
+  "max_tokens": 40,
+  "temperature": 0,
+  "prompt_tokens_first": 14989,
+  "hits": 10,
+  "total": 10,
+  "hit_rate": 1.0,
+  "by_depth": {
+    "5%": {
+      "hits": 2,
+      "total": 2
+    },
+    "25%": {
+      "hits": 2,
+      "total": 2
+    },
+    "50%": {
+      "hits": 2,
+      "total": 2
+    },
+    "75%": {
+      "hits": 2,
+      "total": 2
+    },
+    "95%": {
+      "hits": 2,
+      "total": 2
+    }
+  },
+  "details": [
+    {
+      "id": 1,
+      "depth": 0.05,
+      "code": "VX-2417",
+      "answer": "3185",
+      "model_reply": "3185",
+      "hit": true,
+      "elapsed": 10.0,
+      "prompt_tokens": 14989
+    },
+    {
+      "id": 2,
+      "depth": 0.05,
+      "code": "QM-3921",
+      "answer": "9434",
+      "model_reply": "9434",
+      "hit": true,
+      "elapsed": 17.2,
+      "prompt_tokens": 14990
+    },
+    {
+      "id": 3,
+      "depth": 0.25,
+      "code": "LP-6184",
+      "answer": "7720",
+      "model_reply": "7720",
+      "hit": true,
+      "elapsed": 36.4,
+      "prompt_tokens": 14988
+    },
+    {
+      "id": 4,
+      "depth": 0.25,
+      "code": "KD-5073",
+      "answer": "9974",
+      "model_reply": "9974",
+      "hit": true,
+      "elapsed": 23.4,
+      "prompt_tokens": 14989
+    },
+    {
+      "id": 5,
+      "depth": 0.5,
+      "code": "RS-9462",
+      "answer": "5857",
+      "model_reply": "5857",
+      "hit": true,
+      "elapsed": 34.6,
+      "prompt_tokens": 14989
+    },
+    {
+      "id": 6,
+      "depth": 0.5,
+      "code": "TG-1759",
+      "answer": "8275",
+      "model_reply": "8275",
+      "hit": true,
+      "elapsed": 25.9,
+      "prompt_tokens": 14988
+    },
+    {
+      "id": 7,
+      "depth": 0.75,
+      "code": "BN-8306",
+      "answer": "3853",
+      "model_reply": "3853",
+      "hit": true,
+      "elapsed": 7.6,
+      "prompt_tokens": 14989
+    },
+    {
+      "id": 8,
+      "depth": 0.75,
+      "code": "CH-4628",
+      "answer": "2614",
+      "model_reply": "2614",
+      "hit": true,
+      "elapsed": 2.8,
+      "prompt_tokens": 14989
+    },
+    {
+      "id": 9,
+      "depth": 0.95,
+      "code": "FZ-7135",
+      "answer": "9623",
+      "model_reply": "9623",
+      "hit": true,
+      "elapsed": 3.2,
+      "prompt_tokens": 14990
+    },
+    {
+      "id": 10,
+      "depth": 0.95,
+      "code": "WY-2850",
+      "answer": "4778",
+      "model_reply": "4778",
+      "hit": true,
+      "elapsed": 2.0,
+      "prompt_tokens": 14990
+    }
+  ]
+}

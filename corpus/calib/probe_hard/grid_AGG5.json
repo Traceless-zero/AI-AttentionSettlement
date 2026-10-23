@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-21",
+ "geometry_mode": "scattered",
+ "n_clusters": 20,
+ "note": "加发确认：5 个不同聚合问法（temp=0 下重复同题无意义）",
+ "grid": [
+  {
+   "pair": "AGG_gt5000",
+   "question": "How many archives in this document hold more than 5000 entries?",
+   "answer": "9"
+  },
+  {
+   "pair": "AGG_gt3000",
+   "question": "How many archives in this document hold more than 3000 entries?",
+   "answer": "14"
+  },
+  {
+   "pair": "AGG_lt2000",
+   "question": "How many archives in this document hold fewer than 2000 entries?",
+   "answer": "4"
+  },
+  {
+   "pair": "AGG_max",
+   "question": "What is the largest entry count reported for any archive in this document?",
+   "answer": "9564"
+  },
+  {
+   "pair": "AGG_range",
+   "question": "How many archives hold between 2000 and 6000 entries, inclusive?",
+   "answer": "8"
+  }
+ ]
+}

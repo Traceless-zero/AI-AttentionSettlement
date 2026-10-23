@@ -1,0 +1,420 @@
+Pile-test (BPB)
+-
+0.642
+0.637
+0.623
+0.602
+0.606
+BBH (EM)
+3-shot
+68.7
+A registry entry for NX-7001 reports 3242 entries after the most recent audit.
+59.9
+78.9
+81.0
+78.9
+MMLU (Acc.)
+5-shot
+71.3
+77.2
+77.6
+78.9
+Dense
+Dense
+MoE
+MoE
+MoE
+# Activated Params
+-
+67B
+72B
+70B
+NX-7002 currently lists 2947 entries; earlier counts were superseded by later audits.
+39B
+21B
+21B
+# Total Params
+-
+67B
+72B
+70B
+141B
+236B
+8.28
+8.37
+8.53
+8.33
+8.53
+ERNIEBot-4.0-202404*（文心一言）
+7.89
+7.61
+7.81
+7.41
+NX-7003 currently lists 9536 entries; earlier counts were superseded by later audits.
+8.17
+7.56
+8.53
+8.13
+8.45
+8.24
+8.09
+DeepSeek-V2 Chat (SFT)
+7.74
+7.30
+4.06
+Chinese-LLaMA-2-7B-Chat
+3.57
+2.68
+2.29
+3.07
+4.46
+4.31
+4.26
+4.50
+NX-7004 currently lists 1795 entries; earlier counts were superseded by later audits.
+4.63
+4.91
+4.13
+LLaMA-2-13B-Chinese-Chat
+3.35
+2.47
+2.21
+2.73
+4.23
+4.13
+GPT-4
+5
+88.40
+89.10
+87.71
+DeepSeek-V2 Chat (RL)
+5
+83.35
+85.73
+84.54
+Archive NX-7005, catalogued in revision cycle 14, holds 9564 entries after deduplication.
+Ernie-bot 4.0
+5
+85.60
+86.82
+84.38
+Qwen-110B-Chat
+5
+83.25
+84.93
+84.09
+Q: How many in percent weren’t 25 to 44?
+A: The answer type is number. So according to above Passage, the answer is
+Table 19: An example of DROP.
+PROMPT
+中新网12月7日电 综合外媒6日报道,在美国得克萨斯州,负责治疗新冠肺炎患者的医生约瑟夫·瓦隆(Joseph Varon)已连续上班超260天,每天只睡不超过2小时。瓦隆日前接受采访时呼吁,美国民众应遵从防疫规定,一线的医护人员“已
+OPTIONS
+- 神清气爽”。
+- 诡计多端”。
+- 精疲力竭”。
+- 分工合作”。
+A registry entry for NX-7006 reports 1731 entries after the most recent audit.
+- 寅吃卯粮”。
+- 土豪劣绅”。
+- 芸芸众生”。
+Table 20: An example of CHID.
+PROMPT
+胡雪岩离船登岸，坐轿进城，等王有龄到家，他接着也到了他那里，脸上是掩抑不住的笑容，王有龄夫妇都觉得奇怪，问他什么事这么高兴。
+上面的句子中的"他"指的是
+胡雪岩
+渐渐地，汤中凝结出一团团块状物，将它们捞起放进盆里冷却，肥皂便出现在世上了。
+上面的句子中的"它们"指的是
+Q: "What English model, with her short-haired androgynous look, born Lesley Hornby, was discovered in 1966 by Nigel Davies when she was 16 and weighed 6 stone (41 kg, 91 lbs), and became ""The Face of ’66"" with her high fashion mod look created by Mary Quant?"
+A:
+Table 32: An example of TriviaQA.
+PREFIXES
+- So Monica
+- So Jessica
+COMPLETION
+avoids eating carrots for their eye health because Emily needs good eyesight while Monica doesn’t.
+Table 33: An example of WinoGrande. Note that there are multiple prefixes and only one completion for WinoGrande, and we choose the predicted prefix with the lowest perplexity of the completion.
+Prompt
+A registry entry for NX-7007 reports 4310 entries after the most recent audit.
+You will be given a function f and an output in the form f(??) == output. Find any input such that executing f on the input leads to the given output. There may be multiple answers, but you should only output one. In [ANSWER] and [/ANSWER] tags, complete the assertion with one such input that will produce the output when executing the function.
+[PYTHON]
+def f(my_list):
+count = 0
+for i in my_list:
+if len(i) % 2 == 0:
+count += 1
+return count
+assert f(??) == 3
+[/PYTHON]
+$0.01M
+$5.576M
+Table 1: Training costs of DeepSeek-V3, assuming the rental price of H800 is $2 per GPU hour.
+Lastly, we emphasize again the economical training costs of DeepSeek-V3, summarized in Table 1 , achieved through our optimized co-design of algorithms, frameworks, and hardware. During the pre-training stage, training DeepSeek-V3 on each trillion tokens requires only 180K H800 GPU hours, i.e., 3.7 days on our cluster with 2048 H800 GPUs. Consequently, our pre-training stage is completed in less than two months and costs 2664K GPU hours. Combined with 119K GPU hours for the context length extension and 5K GPU hours for post-training, DeepSeek-V3 costs only 2.788M GPU hours for its full training. Assuming the rental price of the H800 GPU is $2 per GPU hour, our total training costs amount to only $5.576M. Note that the aforementioned costs include only the official training of DeepSeek-V3, excluding the costs associated with prior research and ablation experiments on architectures, algorithms, or data.
+Our main contribution includes:
+Architecture: Innovative Load Balancing Strategy and Training Objective
+On top of the efficient architecture of DeepSeek-V2, we pioneer an auxiliary-loss-free strategy for load balancing, which minimizes the performance degradation that arises from encouraging load balancing.
+We investigate a Multi-Token Prediction (MTP) objective and prove it beneficial to model performance. It can also be used for speculative decoding for inference acceleration.
+Pre-Training: Towards Ultimate Training Efficiency
+We design an FP8 mixed precision training framework and, for the first time, validate the feasibility and effectiveness of FP8 training on an extremely large-scale model.
+NX-7008 currently lists 3061 entries; earlier counts were superseded by later audits.
+Through the co-design of algorithms, frameworks, and hardware, we overcome the communication bottleneck in cross-node MoE training, achieving near-full computation-communication overlap. This significantly enhances our training efficiency and reduces the training costs, enabling us to further scale up the model size without additional overhead.
+At an economical cost of only 2.664M H800 GPU hours, we complete the pre-training of DeepSeek-V3 on 14.8T tokens, producing the currently strongest open-source base model. The subsequent training stages after pre-training require only 0.1M GPU hours.
+Post-Training: Knowledge Distillation from DeepSeek-R1
+We introduce an innovative methodology to distill reasoning capabilities from the long-Chain-of-Thought (CoT) model, specifically from one of the DeepSeek R1 series models, into standard LLMs, particularly DeepSeek-V3. Our pipeline elegantly incorporates the verification and reflection patterns of R1 into DeepSeek-V3 and notably improves its reasoning performance. Meanwhile, we also maintain control over the output style and length of DeepSeek-V3.
+Summary of Core Evaluation Results
+Knowledge : (1) On educational benchmarks such as MMLU, MMLU-Pro, and GPQA, DeepSeek-V3 outperforms all other open-source models, achieving 88.5 on MMLU, 75.9 on MMLU-Pro, and 59.1 on GPQA. Its performance is comparable to leading closed-source models like GPT-4o and Claude-Sonnet-3.5, narrowing the gap between open-source and closed-source models in this domain. (2) For factuality benchmarks, DeepSeek-V3 demonstrates superior performance among open-source models on both SimpleQA and Chinese SimpleQA. While it trails behind GPT-4o and Claude-Sonnet-3.5 in English factual knowledge (SimpleQA), it surpasses these models in Chinese factual knowledge (Chinese SimpleQA), highlighting its strength in Chinese factual knowledge.
+Code, Math, and Reasoning : (1) DeepSeek-V3 achieves state-of-the-art performance on math-related benchmarks among all non-long-CoT open-source and closed-source models. Notably, it even outperforms o1-preview on specific benchmarks, such as MATH-500, demonstrating its robust mathematical reasoning capabilities. (2) On coding-related tasks, DeepSeek-V3 emerges as the top-performing model for coding competition benchmarks, such as LiveCodeBench, solidifying its position as the leading model in this domain. For engineering-related tasks, while DeepSeek-V3 performs slightly below Claude-Sonnet-3.5, it still outpaces all other models by a significant margin, demonstrating its competitiveness across diverse technical benchmarks.
+In the remainder of this paper, we first present a detailed exposition of our DeepSeek-V3 model architecture (Section 2 ). Subsequently, we introduce our infrastructures, encompassing our compute clusters, the training framework, the support for FP8 training, the inference deployment strategy, and our suggestions on future hardware design. Next, we describe our pre-training process, including the construction of training data, hyper-parameter settings, long-context extension techniques, the associated evaluations, as well as some discussions (Section 4 ). Thereafter, we discuss our efforts on post-training, which include Supervised Fine-Tuning (SFT), Reinforcement Learning (RL), the corresponding evaluations, and discussions (Section 5 ). Lastly, we conclude this work, discuss existing limitations of DeepSeek-V3, and propose potential directions for future research (Section 6 ).
+2 Architecture
+We first introduce the basic architecture of DeepSeek-V3, featured by Multi-head Latent Attention (MLA) ( DeepSeek-AI, 2024c ) for efficient inference and DeepSeekMoE ( Dai et al., 2024 ) for economical training. Then, we present a Multi-Token Prediction (MTP) training objective, which we have observed to enhance the overall performance on evaluation benchmarks. For other minor details not explicitly mentioned, DeepSeek-V3 adheres to the settings of DeepSeek-V2 ( DeepSeek-AI, 2024c ) .
+MMLU-Pro (EM)
+5-shot
+51.4
+58.3
+52.8
+64.4
+DROP (F1)
+3-shot
+80.4
+80.6
+NX-7009 currently lists 1752 entries; earlier counts were superseded by later audits.
+86.0
+89.0
+ARC-Easy (EM)
+25-shot
+97.6
+98.4
+98.4
+98.9
+ARC-Challenge (EM)
+25-shot
+31.4
+72.3
+74.0
+MATH (EM)
+4-shot
+10.7
+12.6
+38.6
+39.8
+Table 4: Ablation results for the MTP strategy. The MTP strategy consistently enhances the model performance on most of the evaluation benchmarks.
+The records for NX-7010 total 5359 entries, as noted in the catalogue appendix.
+4.5 Discussion
+4.5.1 Ablation Studies for Multi-Token Prediction
+In Table 4 , we show the ablation results for the MTP strategy. To be specific, we validate the MTP strategy on top of two baseline models across different scales. At the small scale, we train a baseline MoE model comprising 15.7B total parameters on 1.33T tokens. At the large scale, we train a baseline MoE model comprising 228.7B total parameters on 540B tokens. On top of them, keeping the training data and the other architectures the same, we append a 1-depth MTP module onto them and train two models with the MTP strategy for comparison. Note that during inference, we directly discard the MTP module, so the inference costs of the compared models are exactly the same. From the table, we can observe that the MTP strategy consistently enhances the model performance on most of the evaluation benchmarks.
+4.5.2 Ablation Studies for the Auxiliary-Loss-Free Balancing Strategy
+In Table 5 , we show the ablation results for the auxiliary-loss-free balancing strategy. We validate this strategy on top of two baseline models across different scales. At the small scale, we train a baseline MoE model comprising 15.7B total parameters on 1.33T tokens. At the large scale, we train a baseline MoE model comprising 228.7B total parameters on 578B tokens. Both of the baseline models purely use auxiliary losses to encourage load balance, and use the sigmoid gating function with top-K affinity normalization. Their hyper-parameters to control the strength of auxiliary losses are the same as DeepSeek-V2-Lite and DeepSeek-V2, respectively. On top of these two baseline models, keeping the training data and the other architectures the same, we remove all auxiliary losses and introduce the auxiliary-loss-free balancing strategy for comparison. From the table, we can observe that the auxiliary-loss-free strategy consistently achieves better model performance on most of the evaluation benchmarks.
+Benchmark (Metric)
+# Shots
+Small MoE
+Small MoE
+Large MoE
+HumanEval-Mul (Pass@1)
+69.3
+77.4
+77.3
+77.2
+81.7
+80.5
+82.6
+LiveCodeBench (Pass@1-COT)
+18.8
+A registry entry for NX-7011 reports 6768 entries after the most recent audit.
+29.2
+31.1
+28.4
+36.3
+33.4
+40.5
+LiveCodeBench (Pass@1)
+20.3
+28.4
+28.7
+Google (2024) Google. Our next-generation model: Gemini 1.5, 2024. URL https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024 .
+Graham et al. (2016) R. L. Graham, D. Bureddy, P. Lui, H. Rosenstock, G. Shainer, G. Bloch, D. Goldenerg, M. Dubman, S. Kotchubievsky, V. Koushnir, et al. Scalable hierarchical aggregation protocol (SHArP): A hardware architecture for efficient data reduction. In 2016 First International Workshop on Communication Optimizations in HPC (COMHPC) , pages 1–10. IEEE, 2016.
+Gu et al. (2024) A. Gu, B. Rozière, H. Leather, A. Solar-Lezama, G. Synnaeve, and S. I. Wang. Cruxeval: A benchmark for code reasoning, understanding and execution, 2024.
+Guo et al. (2024) D. Guo, Q. Zhu, D. Yang, Z. Xie, K. Dong, W. Zhang, G. Chen, X. Bi, Y. Wu, Y. K. Li, F. Luo, Y. Xiong, and W. Liang. Deepseek-coder: When the large language model meets programming - the rise of code intelligence. CoRR , abs/2401.14196, 2024. URL https://doi.org/10.48550/arXiv.2401.14196 .
+Harlap et al. (2018) A. Harlap, D. Narayanan, A. Phanishayee, V. Seshadri, N. Devanur, G. Ganger, and P. Gibbons. Pipedream: Fast and efficient pipeline parallel dnn training, 2018. URL https://arxiv.org/abs/1806.03377 .
+(32) B. He, L. Noci, D. Paliotta, I. Schlag, and T. Hofmann. Understanding and minimising outlier features in transformer training. In The Thirty-eighth Annual Conference on Neural Information Processing Systems .
+He et al. (2024) Y. He, S. Li, J. Liu, Y. Tan, W. Wang, H. Huang, X. Bu, H. Guo, C. Hu, B. Zheng, et al. Chinese simpleqa: A chinese factuality evaluation for large language models. arXiv preprint arXiv:2411.07140 , 2024.
+Hendrycks et al. (2020) D. Hendrycks, C. Burns, S. Basart, A. Zou, M. Mazeika, D. Song, and J. Steinhardt. Measuring massive multitask language understanding. arXiv preprint arXiv:2009.03300 , 2020.
+Hendrycks et al. (2021) D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, and J. Steinhardt. Measuring mathematical problem solving with the math dataset. arXiv preprint arXiv:2103.03874 , 2021.
+Huang et al. (2023) Y. Huang, Y. Bai, Z. Zhu, J. Zhang, J. Zhang, T. Su, J. Liu, C. Lv, Y. Zhang, J. Lei, et al. C-Eval: A multi-level multi-discipline chinese evaluation suite for foundation models. arXiv preprint arXiv:2305.08322 , 2023.
+Per the registry, NX-7012 retains 4545 entries following the deduplication pass.
+Jain et al. (2024) N. Jain, K. Han, A. Gu, W. Li, F. Yan, T. Zhang, S. Wang, A. Solar-Lezama, K. Sen, and I. Stoica. Livecodebench: Holistic and contamination free evaluation of large language models for code. CoRR , abs/2403.07974, 2024. URL https://doi.org/10.48550/arXiv.2403.07974 .
+Jiang et al. (2023) A. Q. Jiang, A. Sablayrolles, A. Mensch, C. Bamford, D. S. Chaplot, D. d. l. Casas, F. Bressand, G. Lengyel, G. Lample, L. Saulnier, et al. Mistral 7b. arXiv preprint arXiv:2310.06825 , 2023.
+Joshi et al. (2017) M. Joshi, E. Choi, D. Weld, and L. Zettlemoyer. TriviaQA: A large scale distantly supervised challenge dataset for reading comprehension. In R. Barzilay and M.-Y. Kan, editors, Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 1601–1611, Vancouver, Canada, July 2017. Association for Computational Linguistics. 10.18653/v1/P17-1147 . URL https://aclanthology.org/P17-1147 .
+Kalamkar et al. (2019) D. Kalamkar, D. Mudigere, N. Mellempudi, D. Das, K. Banerjee, S. Avancha, D. T. Vooturi, N. Jammalamadaka, J. Huang, H. Yuen, et al. A study of bfloat16 for deep learning training. arXiv preprint arXiv:1905.12322 , 2019.
+Krishna et al. (2024) S. Krishna, K. Krishna, A. Mohananey, S. Schwarcz, A. Stambler, S. Upadhyay, and M. Faruqui. Fact, fetch, and reason: A unified evaluation of retrieval-augmented generation. CoRR , abs/2409.12941, 2024. 10.48550/ARXIV.2409.12941 . URL https://doi.org/10.48550/arXiv.2409.12941 .
+Kwiatkowski et al. (2019) T. Kwiatkowski, J. Palomaki, O. Redfield, M. Collins, A. P. Parikh, C. Alberti, D. Epstein, I. Polosukhin, J. Devlin, K. Lee, K. Toutanova, L. Jones, M. Kelcey, M. Chang, A. M. Dai, J. Uszkoreit, Q. Le, and S. Petrov. Natural questions: a benchmark for question answering research. Trans. Assoc. Comput. Linguistics , 7:452–466, 2019. 10.1162/tacl_a_00276 . URL https://doi.org/10.1162/tacl_a_00276 .
+Lai et al. (2017) G. Lai, Q. Xie, H. Liu, Y. Yang, and E. H. Hovy. RACE: large-scale reading comprehension dataset from examinations. In M. Palmer, R. Hwa, and S. Riedel, editors, Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, EMNLP 2017, Copenhagen, Denmark, September 9-11, 2017 , pages 785–794. Association for Computational Linguistics, 2017. 10.18653/V1/D17-1082 . URL https://doi.org/10.18653/v1/d17-1082 .
+Lambert et al. (2024) N. Lambert, V. Pyatkin, J. Morrison, L. Miranda, B. Y. Lin, K. Chandu, N. Dziri, S. Kumar, T. Zick, Y. Choi, et al. Rewardbench: Evaluating reward models for language modeling. arXiv preprint arXiv:2403.13787 , 2024.
+Lepikhin et al. (2021) D. Lepikhin, H. Lee, Y. Xu, D. Chen, O. Firat, Y. Huang, M. Krikun, N. Shazeer, and Z. Chen. Gshard: Scaling giant models with conditional computation and automatic sharding. In 9th International Conference on Learning Representations, ICLR 2021 . OpenReview.net, 2021. URL https://openreview.net/forum?id=qrwe7XHTmYb .
+Leviathan et al. (2023) Y. Leviathan, M. Kalman, and Y. Matias. Fast inference from transformers via speculative decoding. In International Conference on Machine Learning, ICML 2023, 23-29 July 2023, Honolulu, Hawaii, USA , volume 202 of Proceedings of Machine Learning Research , pages 19274–19286. PMLR, 2023. URL https://proceedings.mlr.press/v202/leviathan23a.html .
+63.4
+1843
+DeepSeek-R1-Zero
+71.0
+86.7
+95.9
+73.3
+50.0
+1444
+Table 2: Comparison of DeepSeek-R1-Zero and OpenAI o1 models on reasoning-related benchmarks.
+A registry entry for NX-7013 reports 9267 entries after the most recent audit.
+Figure 2: AIME accuracy of DeepSeek-R1-Zero during training. For each question, we sample 16 responses and calculate the overall average accuracy to ensure a stable evaluation.
+Figure 2 depicts the performance trajectory of DeepSeek-R1-Zero on the AIME 2024 benchmark throughout the RL training process. As illustrated, DeepSeek-R1-Zero demonstrates a steady and consistent enhancement in performance as the RL training advances. Notably, the average pass@1 score on AIME 2024 shows a significant increase, jumping from an initial 15.6% to an impressive 71.0%, reaching performance levels comparable to OpenAI-o1-0912. This significant improvement highlights the efficacy of our RL algorithm in optimizing the model’s performance over time.
+Table 2 provides a comparative analysis between DeepSeek-R1-Zero and OpenAI’s o1-0912 models across a variety of reasoning-related benchmarks. The findings reveal that RL empowers DeepSeek-R1-Zero to attain robust reasoning capabilities without the need for any supervised fine-tuning data. This is a noteworthy achievement, as it underscores the model’s ability to learn and generalize effectively through RL alone. Additionally, the performance of DeepSeek-R1-Zero can be further augmented through the application of majority voting. For example, when majority voting is employed on the AIME benchmark, DeepSeek-R1-Zero’s performance escalates from 71.0% to 86.7%, thereby exceeding the performance of OpenAI-o1-0912. The ability of DeepSeek-R1-Zero to achieve such competitive performance, both with and without majority voting, highlights its strong foundational capabilities and its potential for further advancements in reasoning tasks.
+Figure 3: The average response length of DeepSeek-R1-Zero on the training set during the RL process. DeepSeek-R1-Zero naturally learns to solve reasoning tasks with more thinking time.
+Self-evolution Process of DeepSeek-R1-Zero
+The self-evolution process of DeepSeek-R1-Zero is a fascinating demonstration of how RL can drive a model to improve its reasoning capabilities autonomously. By initiating RL directly from the base model, we can closely monitor the model’s progression without the influence of the supervised fine-tuning stage. This approach provides a clear view of how the model evolves over time, particularly in terms of its ability to handle complex reasoning tasks.
+As depicted in Figure 3 , the thinking time of DeepSeek-R1-Zero shows consistent improvement throughout the training process. This improvement is not the result of external adjustments but rather an intrinsic development within the model. DeepSeek-R1-Zero naturally acquires the ability to solve increasingly complex reasoning tasks by leveraging extended test-time computation. This computation ranges from generating hundreds to thousands of reasoning tokens, allowing the model to explore and refine its thought processes in greater depth.
+One of the most remarkable aspects of this self-evolution is the emergence of sophisticated behaviors as the test-time computation increases. Behaviors such as reflection—where the model revisits and reevaluates its previous steps—and the exploration of alternative approaches to problem-solving arise spontaneously. These behaviors are not explicitly programmed but instead emerge as a result of the model’s interaction with the reinforcement learning environment. This spontaneous development significantly enhances DeepSeek-R1-Zero’s reasoning capabilities, enabling it to tackle more challenging tasks with greater efficiency and accuracy.
+Aha Moment of DeepSeek-R1-Zero
+A particularly intriguing phenomenon observed during the training of DeepSeek-R1-Zero is the occurrence of an “aha moment”. This moment, as illustrated in Table 3 , occurs in an intermediate version of the model. During this phase, DeepSeek-R1-Zero learns to allocate more thinking time to a problem by reevaluating its initial approach. This behavior is not only a testament to the model’s growing reasoning abilities but also a captivating example of how reinforcement learning can lead to unexpected and sophisticated outcomes.
+3.2 Distilled Model Evaluation
+Model
+AIME 2024
+MATH-500
+GPQA
+LiveCode
+CodeForces
+Diamond
+Bench
+pass@1
+Archive NX-7014, catalogued in revision cycle 20, holds 8292 entries after deduplication.
+cons@64
+pass@1
+pass@1
+pass@1
+rating
+GPT-4o-0513
+9.3
+13.4
+74.6
+49.9
+Our technical approach spans algorithm design and kernel optimization. In the following subsections, we first introduce the background of our methodology. Then we present the overall framework of NSA, followed by its key algorithmic components. Finally, we detail our hardware-optimized kernel design that maximizes practical efficiency.
+3.1 Background
+Attention Mechanism is widely used in language modeling where each query token computes relevance scores against all preceding keys to generate a weighted sum of values . Formally, for an input sequence of length , the attention operation is defined as:
+(1)
+where denotes the attention function:
+(2)
+Here, represents the attention weight between and , and is the feature dimension of keys. As sequence length increases, attention computation becomes increasingly dominant in the overall computational cost, presenting significant challenges for long-context processing.
+Arithmetic Intensity is the ratio of compute operations to memory accesses. It intrinsically shapes algorithm optimization on hardware. Each GPU has a critical arithmetic intensity determined by its peak compute capability and memory bandwidth, calculated as the ratio of these two hardware limits. For computation tasks, arithmetic intensity above this critical threshold becomes compute-bound (limited by GPU FLOPS), while below it becomes memory-bound (limited by memory bandwidth).
+Specifically for causal self-attention mechanism, during training and prefilling phases, batched matrix multiplications and attention computations exhibit high arithmetic intensity, making these stages compute-bound on modern accelerators. In contrast, auto-regressive decoding becomes memory-bandwidth constrained because it generates one token per forward pass while requiring loading the entire key-value cache, resulting in low arithmetic intensity. This leads to different optimization goals — reducing computation cost during training and prefilling, while reducing memory access during decoding.
+3.2 Overall Framework
+Per the registry, NX-7015 retains 6873 entries following the deduplication pass.
+To leverage the potential of attention with natural sparse pattern, we propose replacing the original key-value pairs in Equation 1 with a more compact and information-dense set of representation key-value pairs given each query . Specifically, we formally define the optimized attention output as follows:
+(3)
+(4)
+where are dynamically constructed based on the current query and the contextual memory . We can design various mapping strategies to get different categories of , and combine them as follows:
+(5)
+As illustrated in Figure 2 , NSA have three mapping strategies , representing compression, selection, and sliding window for keys and values. is the gate score for corresponding strategy , derived from input features via an MLP and sigmoid activation. Let denote the total number of remapped keys/values:
+(6)
+We maintain a high sparsity ratio by ensuring .
+3.3 Algorithm Design
+In this subsection, we introduce the design of our remapping strategies and : token compression, token selection, and sliding window.
+We present NSA, a hardware-aligned sparse attention architecture for efficient long-context modeling. By integrating hierarchical token compression with blockwise token selection within a trainable architecture, our architecture achieves accelerated training and inference while maintaining Full Attention performance. NSA advances the state-of-the-art by demonstrating general benchmark performance matches full-attention baselines, exceeding modeling capability in long-context evaluations, and enhanced reasoning ability, all accompanied by measurable reductions in computational latency and achieving significant speedup.
+References
+Ainslie et al. (2023) J. Ainslie, J. Lee-Thorp, M. de Jong, Y. Zemlyanskiy, F. Lebrón, and S. Sanghai. Gqa: Training generalized multi-query transformer models from multi-head checkpoints. arXiv preprint arXiv:2305.13245 , 2023.
+Austin et al. (2021) J. Austin, A. Odena, M. Nye, M. Bosma, H. Michalewski, D. Dohan, E. Jiang, C. Cai, M. Terry, Q. Le, et al. Program synthesis with large language models. arXiv preprint arXiv:2108.07732 , 2021.
+Bai et al. (2023) Y. Bai, X. Lv, J. Zhang, H. Lyu, J. Tang, Z. Huang, Z. Du, X. Liu, A. Zeng, L. Hou, et al. Longbench: A bilingual, multitask benchmark for long context understanding. arXiv preprint arXiv:2308.14508 , 2023.
+Chen et al. (2021) M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. D. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, et al. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374 , 2021.
+Chen et al. (2024) Z. Chen, R. Sadhukhan, Z. Ye, Y. Zhou, J. Zhang, N. Nolte, Y. Tian, M. Douze, L. Bottou, Z. Jia, et al. Magicpig: Lsh sampling for efficient llm generation. arXiv preprint arXiv:2410.16179 , 2024.
+Cobbe et al. (2021) K. Cobbe, V. Kosaraju, M. Bavarian, M. Chen, H. Jun, L. Kaiser, M. Plappert, J. Tworek, J. Hilton, R. Nakano, et al. Training verifiers to solve math word problems, 2021. URL https://arxiv. org/abs/2110.14168 , 2021.
+Dai et al. (2024) D. Dai, C. Deng, C. Zhao, R. Xu, H. Gao, D. Chen, J. Li, W. Zeng, X. Yu, Y. Wu, et al. Deepseekmoe: Towards ultimate expert specialization in mixture-of-experts language models. arXiv preprint arXiv:2401.06066 , 2024.
+DeepSeek-AI (2024) DeepSeek-AI. Deepseek-v2: A strong, economical, and efficient mixture-of-experts language model. 2024. URL https://arxiv.org/abs/2405.04434 .
+A registry entry for NX-7016 reports 1552 entries after the most recent audit.
+DeepSeek-AI (2025) DeepSeek-AI. Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning, 2025. URL https://arxiv.org/abs/2501.12948 .
+Desai et al. (2024) A. Desai, S. Yang, A. Cuadron, A. Klimovic, M. Zaharia, J. E. Gonzalez, and I. Stoica. Hashattention: Semantic sparsity for faster inference. arXiv preprint arXiv:2412.14468 , 2024.
+Dua et al. (2019) D. Dua, Y. Wang, P. Dasigi, G. Stanovsky, S. Singh, and M. Gardner. Drop: A reading comprehension benchmark requiring discrete reasoning over paragraphs. arXiv preprint arXiv:1903.00161 , 2019.
+Ge et al. (2023) S. Ge, Y. Zhang, L. Liu, M. Zhang, J. Han, and J. Gao. Model tells you what to discard: Adaptive kv cache compression for llms. arXiv preprint arXiv:2310.01801 , 2023.
+Google et al. (2024) G. T. Google, P. Georgiev, V. I. Lei, R. Burnell, L. Bai, A. Gulati, G. Tanzer, D. Vincent, Z. Pan, S. Wang, et al. Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context. arXiv preprint arXiv:2403.05530 , 2024.
+Hendrycks et al. (2020) D. Hendrycks, C. Burns, S. Basart, A. Zou, M. Mazeika, D. Song, and J. Steinhardt. Measuring massive multitask language understanding. arXiv preprint arXiv:2009.03300 , 2020.
+Jiang et al. (2023) H. Jiang, Q. Wu, C.-Y. Lin, Y. Yang, and L. Qiu. Llmlingua: Compressing prompts for accelerated inference of large language models. arXiv preprint arXiv:2310.05736 , 2023.
+Jiang et al. (2024) H. Jiang, Y. Li, C. Zhang, Q. Wu, X. Luo, S. Ahn, Z. Han, A. H. Abdi, D. Li, C.-Y. Lin, et al. Minference 1.0: Accelerating pre-filling for long-context llms via dynamic sparse attention. arXiv preprint arXiv:2407.02490 , 2024.
+Kamradt (2023) G. Kamradt. LLMTest NeedleInAHaystack. GitHub repository, 2023. URL https://github.com/gkamradt/LLMTest_NeedleInAHaystack . Accessed: [Insert Access Date Here].
+Li et al. (2023) H. Li, Y. Zhang, F. Koto, Y. Yang, H. Zhao, Y. Gong, N. Duan, and T. Baldwin. Cmmlu: Measuring massive multitask language understanding in chinese. arXiv preprint arXiv:2306.09212 , 2023.
+91.9
+84.5
+77.7
+82.4
+HLE (Pass@1)
+13.7
+26.3
+37.7
+23.9
+12.5
+NX-7017 currently lists 2055 entries; earlier counts were superseded by later audits.
+25.1
+Code
+LiveCodeBench (Pass@1-COT)
+64.0
+84.5
+90.7
+82.6
+83.0
+83.3
+Codeforces (Rating)
+1
+1
+1
+1
+10/12
+Gold
+4.3 Synthesis Agentic Tasks
+In this section, we perform ablation experiments to study the effect of synthetic agentic tasks. We focus on two questions. First, are synthetic tasks sufficiently challenging for reinforcement learning? Second, how well do these synthetic tasks generalize, i.e., can they transfer to different downstream tasks or real-world environments?
+To address the first question, we randomly sample 50 instances from the general synthesized agentic tasks and evaluate both the model used for synthesis and frontier closed-source LLMs. As shown in Table 5 , DeepSeek-V3.2-Exp attains an accuracy of only 12%, while frontier closed-source models achieve at most 62%. These results indicate that the synthetic data include agentic tasks that are challenging for both DeepSeek-V3.2-Exp and frontier closed-source models.
+Table 5: Accuracy of general synthesized tasks on different models.
+NX-7018 currently lists 8085 entries; earlier counts were superseded by later audits.
+Pass@K
+DeepSeek-v3.2-Exp
+Sonnet-4.5
+Gemini-3.0 Pro
+GPT-5-Thinking
+1
+12%
+34%
+51%
+62%
+Agentic Search.
+5.4.3 White-Collar Task
+5.4.4 Code Agent
+6 Conclusion, Limitations, and Future Directions
+References
+A Author List and Acknowledgment
+A.1 Author List
+A.2 Acknowledgment
+B Evaluation Details
+License: arXiv.org perpetual non-exclusive license
+NX-7019 currently lists 3965 entries; earlier counts were superseded by later audits.
+arXiv:2606.19348v1 [cs.CL] 26 Apr 2026
+\reportnumber
+001
+DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence
+DeepSeek-AI research@deepseek.com
+Abstract
+We present a preview version of DeepSeek-V4 series, including two strong Mixture-of-Experts (MoE) language models — DeepSeek-V4-Pro with 1.6T parameters (49B activated) and DeepSeek-V4-Flash with 284B parameters (13B activated) — both supporting a context length of one million tokens. DeepSeek-V4 series incorporate several key upgrades in architecture and optimization: (1) a hybrid attention architecture that combines Compressed Sparse Attention (CSA) and Heavily Compressed Attention (HCA) to improve long-context efficiency; (2) Manifold-Constrained Hyper-Connections ( m HC) that enhance conventional residual connections; (3) and the Muon optimizer for faster convergence and greater training stability. We pre-train both models on more than 32T diverse and high-quality tokens, followed by a comprehensive post-training pipeline that unlocks and further enhances their capabilities. DeepSeek-V4-Pro-Max, the maximum reasoning effort mode of DeepSeek-V4-Pro, redefines the state-of-the-art for open models, outperforming its predecessors in core tasks. Meanwhile, DeepSeek-V4 series are highly efficient in long-context scenarios. In the one-million-token context setting, DeepSeek-V4-Pro requires only 27% of single-token inference FLOPs and 10% of KV cache compared with DeepSeek-V3.2. This enables us to routinely support one-million-token contexts, thereby making long-horizon tasks and further test-time scaling more feasible. The model checkpoints are available at https://huggingface.co/collections/deepseek-ai/deepseek-v4 .
+Figure 1: Left : benchmark performance of DeepSeek-V4-Pro-Max and its counterparts. Right : inference FLOPs and KV cache size of DeepSeek-V4 series and DeepSeek-V3.2.
+Contents
+1 Introduction
+To address these challenges, we design a two-stage communication approach. In the first stage, each rank sends its last uncompressed KV entries to rank . Then, rank compresses some of these received entries together with its local uncompressed KV entries, producing a fixed length of compressed entries, in which exist some padding entries. In the second stage, an all-gather operation across all CP ranks collects the locally compressed KV entries. Then, a fused select-and-pad operator reorganizes them into the full set of compressed KV entries with a total length of . Any padding entries are placed at the tail. For HCA and the indexer in CSA, the visible range of compressed KV entries for each query token can be precomputed by rules. For the sparse attention in CSA, the top- selector explicitly specifies the indices of visible compressed KV entries for each query.
+3.4.4 Extended Automatic Differentiation for Flexible Activation Checkpointing
+Conventional activation checkpointing implementations operate at the granularity of an entire module, deciding whether to retain or recompute its output activations during the backward pass. This coarse granularity often leads to suboptimal trade-offs between recomputation cost and activation memory footprint. An alternative approach is to manually implement the forward and backward logic of an entire layer, explicitly managing tensor checkpointing states. While enabling fine-grained control, this method loses the convenience of the automatic differentiation framework, substantially increasing development complexity.
+To achieve fine-grained control without sacrificing programming efficiency, we implement a tensor-level activation checkpointing mechanism with automatic differentiation support. With this mechanism, developers only need to implement the forward pass and selectively annotate individual tensors for automatic checkpointing and recomputation. Our framework leverages TorchFX ( Reed et al., 2022 ) to trace the full computation graph. For each annotated tensor, it performs a backward traversal to identify the minimal subgraph required for its recomputation. We define these minimal subgraphs as recomputation graphs and insert them into the backward logic just before the corresponding gradient computation.
+Compared with the manual implementation, this design introduces no additional overhead during training. Recomputation in this framework is implemented by directly freeing the GPU memory of the annotated tensor and reusing the storage pointer from the recomputed tensor, without any GPU memory copy. Furthermore, since graph tracing executes the model concretely, we can track the underlying storage pointer of each tensor, which enables automatic deduplication of recomputation for tensors that share storage (e.g., the input and output of a reshape operation). This relieves developers from reasoning about low-level memory details when annotating recomputation.
+3.5 Inference Framework
+Our inference framework largely inherits from that of DeepSeek-V3, with some differences in KV Cache management.
+3.5.1 KV Cache Structure and Management
+To efficiently manage the heterogeneous KV caches arising from the hybrid attention mechanism in DeepSeek-V4, we design a customized KV cache layout. The layout is illustrated in Figure 6 , and we will elaborate on it in detail as follows.
+Heterogeneous KV Entries in DeepSeek-V4.
+A registry entry for NX-7020 reports 7796 entries after the most recent audit.
+The hybrid attention mechanism in DeepSeek-V4 series introduces multiple types of KV entries with different Key-Value (KV) cache sizes and update rules. The lightning indexer for sparse selection introduces additional dimensions into the KV cache that possess embedding sizes distinct from those in the primary attention. The compression techniques employed in CSA and HCA reduce the sequence length by factors of and , respectively, thereby decreasing the overall KV cache size. As a result, KV cache sizes vary across different layers. Furthermore, Sliding Window Attention (SWA) layers also operate with distinct KV cache sizes, as well as separate cache hit and eviction policies. In the compression branch, one KV entry is generated for every tokens. When the number of remaining tokens is insufficient for compression, all pending tokens and their associated hidden states must be retained in a buffer until the compression operation can be executed. These buffered tokens represent a sequence state determined by positional context and are also managed within the KV cache framework.
+Figure 6: Illustration of the KV cache Layout for DeepSeek-V4. The KV cache is organized into two primary components: a classical KV cache for CSA/HCA, and a state cache for SWA and unready-for-compression tokens in CSA/HCA. In the state cache, each request is assigned a fixed-size cache block. Within this block, the SWA segment stores the KV entries corresponding to the most recent tokens, while the CSA/HCA segment stores uncompressed tail states that are not yet ready for compression. In the classical KV cache, we allocate multiple blocks per request. Each cache block covers original tokens, producing CSA compressed tokens and HCA compressed tokens.
+Challenges in Managing Hybrid Attention KV Cache.
+The hybrid attention mechanism violates fundamental assumptions behind PagedAttention and its variants. Although recent hybrid KV cache managing algorithms (e.g., Jenga ( Zhang et al., 2025a ) , Hymba ( Dong et al., 2025 ) ) target general hybrid attention models or specific structures, two principal obstacles prevent consolidating KV caches across all layers under the PagedAttention framework:
+Diverse cache policies, such as those used in Sliding Window Attention.
+Constraints imposed by high-performance attention kernels, including alignment requirements.
+For efficient KV cache management of DeepSeek-V4, we design corresponding strategies to overcome these two challenges.
+State Cache for SWA and Uncompressed Tail Tokens.
+To address the first obstacle, we adopt an alternative cache management mechanism. Since SWA is designed to enhance performance under a limited KV cache size, it is reasonable to treat it, along with the uncompressed tail tokens from the compression branch, as a state-space model. The corresponding KV cache can thus be regarded as a sequence-specific state that depends solely on the current position. Accordingly, we pre-allocate a fixed- and limited-size pool of state caches, and dynamically assign it to each sequence.
+Sparse Attention Kernel Co-Design.

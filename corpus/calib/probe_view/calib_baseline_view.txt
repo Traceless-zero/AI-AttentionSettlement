@@ -1,0 +1,4 @@
+Internal memo excerpts (test baseline).
+A supplementary internal record notes that minor archive NX-6590 holds a total of 5794 entries. [NX-6590]
+A supplementary internal record notes that minor archive NX-6864 holds a total of 1453 entries. [NX-6864]
+A supplementary internal record notes that minor archive NX-6101 holds a total of 6713 entries. [NX-6101]

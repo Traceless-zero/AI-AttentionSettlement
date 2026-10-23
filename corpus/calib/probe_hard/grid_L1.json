@@ -1,0 +1,108 @@
+{
+ "date": "2026-10-20",
+ "tier": "L1",
+ "geometry_mode": "scattered",
+ "n_clusters": 20,
+ "grid": [
+  {
+   "pair": "NX-7001",
+   "question": "What is the entry count reported for archive NX-7001?",
+   "answer": "3242"
+  },
+  {
+   "pair": "NX-7002",
+   "question": "What is the entry count reported for archive NX-7002?",
+   "answer": "2947"
+  },
+  {
+   "pair": "NX-7003",
+   "question": "What is the entry count reported for archive NX-7003?",
+   "answer": "9536"
+  },
+  {
+   "pair": "NX-7004",
+   "question": "What is the entry count reported for archive NX-7004?",
+   "answer": "1795"
+  },
+  {
+   "pair": "NX-7005",
+   "question": "What is the entry count reported for archive NX-7005?",
+   "answer": "9564"
+  },
+  {
+   "pair": "NX-7006",
+   "question": "What is the entry count reported for archive NX-7006?",
+   "answer": "1731"
+  },
+  {
+   "pair": "NX-7007",
+   "question": "What is the entry count reported for archive NX-7007?",
+   "answer": "4310"
+  },
+  {
+   "pair": "NX-7008",
+   "question": "What is the entry count reported for archive NX-7008?",
+   "answer": "3061"
+  },
+  {
+   "pair": "NX-7009",
+   "question": "What is the entry count reported for archive NX-7009?",
+   "answer": "1752"
+  },
+  {
+   "pair": "NX-7010",
+   "question": "What is the entry count reported for archive NX-7010?",
+   "answer": "5359"
+  },
+  {
+   "pair": "NX-7011",
+   "question": "What is the entry count reported for archive NX-7011?",
+   "answer": "6768"
+  },
+  {
+   "pair": "NX-7012",
+   "question": "What is the entry count reported for archive NX-7012?",
+   "answer": "4545"
+  },
+  {
+   "pair": "NX-7013",
+   "question": "What is the entry count reported for archive NX-7013?",
+   "answer": "9267"
+  },
+  {
+   "pair": "NX-7014",
+   "question": "What is the entry count reported for archive NX-7014?",
+   "answer": "8292"
+  },
+  {
+   "pair": "NX-7015",
+   "question": "What is the entry count reported for archive NX-7015?",
+   "answer": "6873"
+  },
+  {
+   "pair": "NX-7016",
+   "question": "What is the entry count reported for archive NX-7016?",
+   "answer": "1552"
+  },
+  {
+   "pair": "NX-7017",
+   "question": "What is the entry count reported for archive NX-7017?",
+   "answer": "2055"
+  },
+  {
+   "pair": "NX-7018",
+   "question": "What is the entry count reported for archive NX-7018?",
+   "answer": "8085"
+  },
+  {
+   "pair": "NX-7019",
+   "question": "What is the entry count reported for archive NX-7019?",
+   "answer": "3965"
+  },
+  {
+   "pair": "NX-7020",
+   "question": "What is the entry count reported for archive NX-7020?",
+   "answer": "7796"
+  }
+ ]
+}

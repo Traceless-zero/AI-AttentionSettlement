@@ -1,0 +1,92 @@
+{
+ "date": "2026-10-18",
+ "stage": "anchor_arm_adj2k",
+ "design": "复刻 calib_128k_adj2 的全部针（0 链跳1 + 0 链跳2 + 10 计数），仅把散文句换成 k8s 结构块；位置/编号/数值/题面不变",
+ "source_doc": "probe_B128/calib_128k_adj2.txt",
+ "baseline_pairs": [
+  "NX-6042",
+  "NX-6179"
+ ],
+ "grid": [
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6042",
+   "depth": 0.800221770467566,
+   "question": "What is the total number of entries recorded for minor archive NX-6042?",
+   "answer": "6287",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6179",
+   "depth": 0.8007761966364813,
+   "question": "What is the total number of entries recorded for minor archive NX-6179?",
+   "answer": "2970",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6316",
+   "depth": 0.8017002402513399,
+   "question": "What is the total number of entries recorded for minor archive NX-6316?",
+   "answer": "4472",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6453",
+   "depth": 0.8031787100351137,
+   "question": "What is the total number of entries recorded for minor archive NX-6453?",
+   "answer": "8701",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6590",
+   "depth": 0.8035483274810571,
+   "question": "What is the total number of entries recorded for minor archive NX-6590?",
+   "answer": "5794",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6727",
+   "depth": 0.8041027536499723,
+   "question": "What is the total number of entries recorded for minor archive NX-6727?",
+   "answer": "5371",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6864",
+   "depth": 0.805026797264831,
+   "question": "What is the total number of entries recorded for minor archive NX-6864?",
+   "answer": "1453",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6101",
+   "depth": 0.8065052670486047,
+   "question": "What is the total number of entries recorded for minor archive NX-6101?",
+   "answer": "6713",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6238",
+   "depth": 0.8068748844945481,
+   "question": "What is the total number of entries recorded for minor archive NX-6238?",
+   "answer": "3257",
+   "answer_occurrences": 1
+  },
+  {
+   "doc": "calib_128k_anchor_adj2k",
+   "pair": "NX-6375",
+   "depth": 0.8074293106634634,
+   "question": "What is the total number of entries recorded for minor archive NX-6375?",
+   "answer": "1090",
+   "answer_occurrences": 1
+  }
+ ]
+}

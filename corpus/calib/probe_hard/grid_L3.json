@@ -1,0 +1,13 @@
+{
+ "date": "2026-10-20",
+ "tier": "L3",
+ "geometry_mode": "scattered",
+ "n_clusters": 20,
+ "grid": [
+  {
+   "pair": "AGG_sum",
+   "question": "What is the total of all entry counts reported for the archives in this document?",
+   "answer": "102495"
+  }
+ ]
+}

@@ -1,0 +1,392 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "f588a26b7cfb0058"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "NX-7001",
+   "want": "3242",
+   "got": "3242",
+   "raw": "3242",
+   "ts": "2026-10-21T15:03:21",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129990
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7002",
+   "want": "2947",
+   "got": "2947",
+   "raw": "2947",
+   "ts": "2026-10-21T15:03:31",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 1.5,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7003",
+   "want": "9536",
+   "got": "9536",
+   "raw": "9536",
+   "ts": "2026-10-21T15:03:41",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 2.0,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7004",
+   "want": "1795",
+   "got": "1795",
+   "raw": "1795",
+   "ts": "2026-10-21T15:03:50",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130003
+   },
+   "elapsed": 1.5,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7005",
+   "want": "9564",
+   "got": "9564",
+   "raw": "9564",
+   "ts": "2026-10-21T15:04:00",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7006",
+   "want": "1731",
+   "got": "1731",
+   "raw": "1731",
+   "ts": "2026-10-21T15:04:10",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130003
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7007",
+   "want": "4310",
+   "got": "4310",
+   "raw": "4310",
+   "ts": "2026-10-21T15:04:19",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7008",
+   "want": "3061",
+   "got": "3061",
+   "raw": "3061",
+   "ts": "2026-10-21T15:04:29",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130003
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7009",
+   "want": "1752",
+   "got": "1752",
+   "raw": "1752",
+   "ts": "2026-10-21T15:04:39",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 130000,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130003
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7010",
+   "want": "5359",
+   "got": "5359",
+   "raw": "5359",
+   "ts": "2026-10-21T15:04:49",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129990
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 2.1,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7011",
+   "want": "6768",
+   "got": "6768",
+   "raw": "6768",
+   "ts": "2026-10-21T15:04:59",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7012",
+   "want": "4545",
+   "got": "4545",
+   "raw": "4545",
+   "ts": "2026-10-21T15:05:09",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7013",
+   "want": "9267",
+   "got": "9267",
+   "raw": "9267",
+   "ts": "2026-10-21T15:05:19",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7014",
+   "want": "8292",
+   "got": "8292",
+   "raw": "8292",
+   "ts": "2026-10-21T15:05:28",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.5,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7015",
+   "want": "6873",
+   "got": "6873",
+   "raw": "6873",
+   "ts": "2026-10-21T15:05:38",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7016",
+   "want": "1552",
+   "got": "1552",
+   "raw": "1552",
+   "ts": "2026-10-21T15:05:48",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7017",
+   "want": "2055",
+   "got": "2055",
+   "raw": "2055",
+   "ts": "2026-10-21T15:05:57",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 3,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130004
+   },
+   "elapsed": 1.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7018",
+   "want": "8085",
+   "got": "8085",
+   "raw": "8085",
+   "ts": "2026-10-21T15:06:07",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.8,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7019",
+   "want": "3965",
+   "got": "3965",
+   "raw": "3965",
+   "ts": "2026-10-21T15:06:17",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129992
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.7,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "NX-7020",
+   "want": "7796",
+   "got": "7796",
+   "raw": "7796",
+   "ts": "2026-10-21T15:06:27",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 130001,
+    "prompt_tokens_details": {
+     "cached_tokens": 129991
+    },
+    "total_tokens": 130005
+   },
+   "elapsed": 1.7,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "glm-4.5-air",
+ "corpus_hash": {
+  "doc": "fd9f35c1ef15987b",
+  "grid": "f4dbe377050660ea"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG5_sum",
+   "want": "30498",
+   "got": "30798",
+   "raw": "30798",
+   "ts": "2026-10-21T16:03:38",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 863,
+    "prompt_tokens_details": {
+     "cached_tokens": 4
+    },
+    "total_tokens": 867
+   },
+   "elapsed": 0.6,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_max",
+   "want": "7825",
+   "got": "7825",
+   "raw": "7825",
+   "ts": "2026-10-21T16:03:57",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 861,
+    "prompt_tokens_details": {
+     "cached_tokens": 843
+    },
+    "total_tokens": 865
+   },
+   "elapsed": 11.1,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_gt4000",
+   "want": "4",
+   "got": "4",
+   "raw": "4",
+   "ts": "2026-10-21T16:04:05",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 861,
+    "prompt_tokens_details": {
+     "cached_tokens": 840
+    },
+    "total_tokens": 863
+   },
+   "elapsed": 0.5,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_lt3000",
+   "want": "1",
+   "got": "0",
+   "raw": "0",
+   "ts": "2026-10-21T16:04:14",
+   "hit": false,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 861,
+    "prompt_tokens_details": {
+     "cached_tokens": 847
+    },
+    "total_tokens": 863
+   },
+   "elapsed": 0.9,
+   "error": null,
+   "provider": null
+  },
+  {
+   "pair": "AGG5_count",
+   "want": "5",
+   "got": "5",
+   "raw": "5",
+   "ts": "2026-10-21T16:04:23",
+   "hit": true,
+   "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 856,
+    "prompt_tokens_details": {
+     "cached_tokens": 843
+    },
+    "total_tokens": 858
+   },
+   "elapsed": 0.4,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

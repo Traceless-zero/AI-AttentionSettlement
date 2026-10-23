@@ -1,0 +1,33 @@
+{
+ "date": "2026-10-19",
+ "stage": "density_cell",
+ "model": "deepseek-flash",
+ "corpus_hash": {
+  "doc": "ce47b255c56e4736",
+  "grid": "f3428865fd01e832"
+ },
+ "resumes": 0,
+ "details": [
+  {
+   "pair": "AGG_sum",
+   "want": "102495",
+   "got": "3242 + 2947 + 9536 + 1795 + 9564 + 1731 + 4310 + 3061 + 1752",
+   "raw": "3242 + 2947 + 9536 + 1795 + 9564 + 1731 + 4310 + 3061 + 1752 + 5359 + 6768 + 4545 + 9267 + 8292 + 6873 + 1552 + 2055 + 8085 + 3965 + 7796 = 104,435",
+   "ts": "2026-10-21T20:19:56",
+   "hit": false,
+   "usage": {
+    "prompt_tokens": 129076,
+    "completion_tokens": 83,
+    "total_tokens": 129159,
+    "prompt_tokens_details": {
+     "cached_tokens": 128896
+    },
+    "prompt_cache_hit_tokens": 128896,
+    "prompt_cache_miss_tokens": 180
+   },
+   "elapsed": 1.9,
+   "error": null,
+   "provider": null
+  }
+ ]
+}

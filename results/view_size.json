@@ -1,0 +1,307 @@
+{
+ "date": "2026-10-21",
+ "model": "glm-4.5-air",
+ "doc": "calib_128k_adj2.txt",
+ "rows": [
+  {
+   "size": "L1000",
+   "chars": 1160,
+   "pair": "NX-6042",
+   "want": "6287",
+   "got": "6287",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1637,
+   "pair": "NX-6179",
+   "want": "2970",
+   "got": "2970",
+   "hit": true,
+   "elapsed": 0.5,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1903,
+   "pair": "NX-6316",
+   "want": "4472",
+   "got": "4472",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 2330,
+   "pair": "NX-6453",
+   "want": "8701",
+   "got": "8701",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1119,
+   "pair": "NX-6590",
+   "want": "5794",
+   "got": "5794",
+   "hit": true,
+   "elapsed": 0.3,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1369,
+   "pair": "NX-6727",
+   "want": "5371",
+   "got": "5371",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1004,
+   "pair": "NX-6864",
+   "want": "1453",
+   "got": "1453",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1010,
+   "pair": "NX-6101",
+   "want": "6713",
+   "got": "6713",
+   "hit": true,
+   "elapsed": 0.5,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1048,
+   "pair": "NX-6238",
+   "want": "3257",
+   "got": "3257",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L1000",
+   "chars": 1000,
+   "pair": "NX-6375",
+   "want": "1090",
+   "got": "1090",
+   "hit": true,
+   "elapsed": 0.3,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 1160,
+   "pair": "NX-6042",
+   "want": "6287",
+   "got": "6287",
+   "hit": true,
+   "elapsed": 0.3,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 657,
+   "pair": "NX-6179",
+   "want": "2970",
+   "got": "2970",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 538,
+   "pair": "NX-6316",
+   "want": "4472",
+   "got": "4472",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 546,
+   "pair": "NX-6453",
+   "want": "8701",
+   "got": "8701",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 543,
+   "pair": "NX-6590",
+   "want": "5794",
+   "got": "5794",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 500,
+   "pair": "NX-6727",
+   "want": "5371",
+   "got": "5371",
+   "hit": true,
+   "elapsed": 0.3,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 539,
+   "pair": "NX-6864",
+   "want": "1453",
+   "got": "1453",
+   "hit": true,
+   "elapsed": 0.9,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 523,
+   "pair": "NX-6101",
+   "want": "6713",
+   "got": "6713",
+   "hit": true,
+   "elapsed": 0.5,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 575,
+   "pair": "NX-6238",
+   "want": "3257",
+   "got": "3257",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "L500",
+   "chars": 499,
+   "pair": "NX-6375",
+   "want": "1090",
+   "got": "1090",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6042",
+   "want": "6287",
+   "got": "6287",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6179",
+   "want": "2970",
+   "got": "2970",
+   "hit": true,
+   "elapsed": 0.9,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6316",
+   "want": "4472",
+   "got": "4472",
+   "hit": true,
+   "elapsed": 0.5,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6453",
+   "want": "8701",
+   "got": "8701",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6590",
+   "want": "5794",
+   "got": "5794",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6727",
+   "want": "5371",
+   "got": "5371",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6864",
+   "want": "1453",
+   "got": "1453",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6101",
+   "want": "6713",
+   "got": "6713",
+   "hit": true,
+   "elapsed": 1.7,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6238",
+   "want": "3257",
+   "got": "3257",
+   "hit": true,
+   "elapsed": 2.8,
+   "err": ""
+  },
+  {
+   "size": "LINE",
+   "chars": 105,
+   "pair": "NX-6375",
+   "want": "1090",
+   "got": "1090",
+   "hit": true,
+   "elapsed": 0.4,
+   "err": ""
+  }
+ ]
+}

@@ -1,0 +1,425 @@
+{
+ "date": "2026-10-20",
+ "checks": {
+  "1_答案全档唯一": true,
+  "2_名字唯一": true,
+  "3_属性对唯一": true,
+  "4_答案互异": true
+ },
+ "id": {
+  "label": "id 档（sanity）",
+  "k_blocks": 3,
+  "recall": "38/40",
+  "recall_pct": 95.0,
+  "per": [
+   {
+    "pair": "svc-8001",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8002",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8003",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8004",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8005",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8006",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8007",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8008",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8009",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8010",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8011",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8012",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8013",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8014",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8015",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8016",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8017",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8018",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8019",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8020",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8021",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8022",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8023",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8024",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8025",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8026",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8027",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8028",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8029",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8030",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8031",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8032",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8033",
+    "hit": false,
+    "gold_rank": 34
+   },
+   {
+    "pair": "svc-8034",
+    "hit": true,
+    "gold_rank": 2
+   },
+   {
+    "pair": "svc-8035",
+    "hit": false,
+    "gold_rank": 24
+   },
+   {
+    "pair": "svc-8036",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8037",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8038",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8039",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8040",
+    "hit": true,
+    "gold_rank": 1
+   }
+  ]
+ },
+ "attr": {
+  "label": "attr 档（真测试）",
+  "k_blocks": 3,
+  "recall": "33/40",
+  "recall_pct": 82.5,
+  "per": [
+   {
+    "pair": "svc-8001",
+    "hit": true,
+    "gold_rank": 2
+   },
+   {
+    "pair": "svc-8002",
+    "hit": true,
+    "gold_rank": 3
+   },
+   {
+    "pair": "svc-8003",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8004",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8005",
+    "hit": true,
+    "gold_rank": 2
+   },
+   {
+    "pair": "svc-8006",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8007",
+    "hit": false,
+    "gold_rank": 5
+   },
+   {
+    "pair": "svc-8008",
+    "hit": true,
+    "gold_rank": 3
+   },
+   {
+    "pair": "svc-8009",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8010",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8011",
+    "hit": true,
+    "gold_rank": 2
+   },
+   {
+    "pair": "svc-8012",
+    "hit": true,
+    "gold_rank": 2
+   },
+   {
+    "pair": "svc-8013",
+    "hit": false,
+    "gold_rank": 6
+   },
+   {
+    "pair": "svc-8014",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8015",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8016",
+    "hit": true,
+    "gold_rank": 2
+   },
+   {
+    "pair": "svc-8017",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8018",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8019",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8020",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8021",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8022",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8023",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8024",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8025",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8026",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8027",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8028",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8029",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8030",
+    "hit": false,
+    "gold_rank": 6
+   },
+   {
+    "pair": "svc-8031",
+    "hit": true,
+    "gold_rank": 3
+   },
+   {
+    "pair": "svc-8032",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8033",
+    "hit": false,
+    "gold_rank": 35
+   },
+   {
+    "pair": "svc-8034",
+    "hit": false,
+    "gold_rank": 10
+   },
+   {
+    "pair": "svc-8035",
+    "hit": false,
+    "gold_rank": 29
+   },
+   {
+    "pair": "svc-8036",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8037",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8038",
+    "hit": false,
+    "gold_rank": 6
+   },
+   {
+    "pair": "svc-8039",
+    "hit": true,
+    "gold_rank": 1
+   },
+   {
+    "pair": "svc-8040",
+    "hit": true,
+    "gold_rank": 1
+   }
+  ]
+ }
+}

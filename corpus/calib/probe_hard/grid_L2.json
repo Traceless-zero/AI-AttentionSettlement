@@ -1,0 +1,13 @@
+{
+ "date": "2026-10-20",
+ "tier": "L2",
+ "geometry_mode": "scattered",
+ "n_clusters": 20,
+ "grid": [
+  {
+   "pair": "AGG_over7000",
+   "question": "How many archives in this document hold more than 7000 entries?",
+   "answer": "6"
+  }
+ ]
+}

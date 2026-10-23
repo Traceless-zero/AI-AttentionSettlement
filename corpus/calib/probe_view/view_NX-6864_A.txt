@@ -1,0 +1,14 @@
+MMLU-Pro (EM)
+88.2
+87.5
+90.1
+84.6
+A supplementary internal record notes that minor archive NX-6864 holds a total of 1453 entries. [NX-6864]
+82.0
+85.0
+GPQA Diamond (Pass@1)
+83.4
+85.7
+91.9
+84.5
+77.7

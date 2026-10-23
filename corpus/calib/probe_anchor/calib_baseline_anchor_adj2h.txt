@@ -1,0 +1,13 @@
+===== FILE: record =====
+kind: Record
+metadata:
+  name: NX-6042
+spec:
+  entries_total: 6287
+
+===== FILE: record =====
+kind: Record
+metadata:
+  name: NX-6179
+spec:
+  entries_total: 2970
