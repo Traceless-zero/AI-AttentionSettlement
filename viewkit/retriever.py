@@ -23,8 +23,8 @@ CJK = re.compile(r"[\u4e00-\u9fff]+")
 
 def _toks(s):
     """中文走**二元切分**（BM25 在中文上的通行做法），英文/数字按词。
-    早期只抓 ASCII：中文句子只剩数字能进词表，相关度全零，排序退化成"从第一回装"。"""
-    # '×8' 这类记法此前被切成单字 '8'，等于把抓手销毁 → 先把 × 归成 x
+    只抓 ASCII 的话，中文句子只剩数字能进词表，相关度全零，排序退化成"从第一回装"。"""
+    # '×8' 这类记法会被切成单字 '8'（等于把抓手销毁）→ 先把 × 归成 x
     low = s.lower().replace("×", "x").replace("＊", "x")
     out = [t for t in TOK.findall(low) if t not in STOP and (len(t) > 1 or t.isdigit())]
     for run in CJK.findall(low):
@@ -60,7 +60,7 @@ class BM25:
                 f = tf.get(t, 0)
                 s += idf * f * 2.2 / (f + 1.2 * (0.25 + 0.75 * self.len[i] / self.avg))
             out.append((s, i))
-        # 平局取**较早**的回合（原来 reverse=True 会让平局偏向最后一条，属任意偏向）
+        # 平局取**较早**的回合（固定偏向，避免 reverse=True 隐式偏向最后一条）
         return sorted(out, key=lambda x: (-x[0], x[1]))
 
 

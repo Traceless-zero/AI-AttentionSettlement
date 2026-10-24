@@ -62,7 +62,9 @@ results/     精选结果 JSON — 每个数字可溯源 every number traceable�
 corpus/      实验语料 corpora + DATA_SOURCES.md（来源与授权 provenance & license）
 ```
 
-## 定位 · Positioning（对照 2024–2026 文献核查 verified against 2024–2026 literature）
+## 定位 · Positioning
+
+（对照 2024–2026 文献核查 verified against 2024–2026 literature）
 
 | 系统 System | 每问重算 per-query | 窗口内 in-window | 物化视图 view | 指针 pointers | 无损沉积 lossless | 下钻闭环 drill-down |
 |---|---|---|---|---|---|---|

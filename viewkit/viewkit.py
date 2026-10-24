@@ -16,13 +16,13 @@ viewkit — 二级视图构建器
                 → 视图 = 相关**整回合**，按原文顺序拼接，绝不拆句
                 → 目标已在尾部高注意力区时 **不产出视图**（view=None）
 
-一代模式（lookup / gather / search）是为早期合成语料造的，**非回合语料才用**：
+非回合模式（lookup / gather / search）面向文档 / 针型语料，**非回合语料才用**：
 
     lookup   ：问题指向一个具体实体 → 视图 = 含该实体的最小窗口（实测 78 字符）
     gather   ：问题在问聚合 → 视图 = **所有同类型实例**（不是 top-k）（实测 1,662 字符）
     search   ：两者都不是 → 句级 BM25/CE 检索
 
-`--mode auto` 会按语料格式判断：有回合标记 → turns；没有 → 退回一代路由。
+`--mode auto` 会按语料格式判断：有回合标记 → turns；没有 → 退回非回合路由。
 **不传 --mode 就是 turns**，非回合语料要显式传 `--mode auto`。
 
 用法
@@ -175,8 +175,8 @@ def build_view(text, question, mode="auto", budget=None, use_ce=False,
     spans 指回沉积层（行号），这是"下钻"的接口——今天只做到接口，没做交互"""
     text = normalize(text)
     sents = sentences(text)
-    # auto 的**默认出口是 turns**——语料是回合格式就直接走二代主线；
-    # 只有非回合语料（针型语料、k8s 配置等一代实验语料）才退回 lookup/gather/search。
+    # auto 的**默认出口是 turns**——语料是回合格式就直接走主线；
+    # 只有非回合语料（针型语料、k8s 配置等）才退回 lookup/gather/search。
     if mode == "auto":
         mode = "turns" if has_turn_marks(text) else pick_mode(question)
     else:
@@ -353,7 +353,7 @@ def main():
     ap.add_argument("--ask")
     ap.add_argument("--mode", choices=["auto", "lookup", "gather", "search", "turns"],
                     default="turns",
-                    help="默认 turns（对话回合主线）；传 auto 则由语料格式判断，非回合语料退回一代模式")
+                    help="默认 turns（对话回合主线）；传 auto 则由语料格式判断，非回合语料退回基础模式")
     ap.add_argument("--budget", type=int, default=DEFAULT_BUDGET_TOKENS,
                     help=f"turns 模式的 **token** 预算；装不下整块跳过（默认 {DEFAULT_BUDGET_TOKENS}）")
     ap.add_argument("--json", action="store_true")
